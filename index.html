@@ -21,6 +21,9 @@
     <!-- Slik -->
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <!-- Select2Lib -->
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/select2-bootstrap.min.css">
     <!-- Style -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -32,96 +35,438 @@
     <header class="smViewHeader">
         <div class="container">
             <div class="top">
-                <div class="logo"><a href="index.html"><img
-                            src="https://eg.waseet.net/common-assets/img/logo/en-wasset-logo.svg" alt="logo"></a>
+                <!-- Logo in Small devises -->
+                <div class="logoSm toggleShowHide"><a href="index.html"><img src="images/icon/en-wasset-logo.svg"
+                            alt="logo"></a>
                 </div>
-                <div class="icon_smView">
-                    <div class="search_icon"><a href=""><img src="images/icon/search.svg" alt="search"></a> </div>
-                    <div class="notifiction_icon"><a href=""> <img src="images/icon/bell.svg" alt="bell"></a>
-                        <div class="not-count">1</div>
+                <!-- headerControlLangAndRegionLargeDevices from 992px width -->
+                <div class="headerControlLangAndRegionLargeDevices toggleShowHide">
+                    <div class="langBtn">
+                        <a href=""><img src="images/icon/ComponentAr.svg" alt="Ar"></a>
+                    </div>
+                    <div class="regionBtn">
+                        <div class="regionFlag">
+                            <button class="clickMe"><img src="images/flags/omomanflag_111794.png" alt="">
+                                <p>Oman<span class="chevronDown"><i
+                                            class="fa-solid fa-chevron-down chevronBtn"></i></span></p>
+                            </button>
+                            <ul class="flagRegionUL ulStyle overflow">
+                                <li class="flagRegionULLi">
+                                    <div class="flag_img image_0"></div>
+                                    <p class="countryName">oman</p>
+                                    <span class="chevronDown"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <ul class="cites">
+                                        <li><a href="">all cities</a></li>
+                                        <li><a href="">Muscat</a></li>
+                                        <li><a href="">Salalah</a></li>
+                                        <li><a href="">Ad Dakhiliyah</a></li>
+                                        <li><a href="">Al Batinah</a></li>
+                                        <li><a href="">Ad Dhahirah</a></li>
+                                        <li><a href="">Al Buraimi</a></li>
+                                        <li><a href="">Al Wusta</a></li>
+                                        <li><a href="">Musandam</a></li>
+                                        <li><a href="">Ash Sharqiyah</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="flagRegionULLi">
+                                    <div class="flag_img image_1"></div>
+                                    <p class="countryName">kuwait</p>
+                                    <span class="chevronDown"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <ul class="cites">
+                                        <li><a href="">all cities</a></li>
+                                        <li><a href="">Kuwait City</a></li>
+                                        <li><a href="">Al Farwaniya</a></li>
+                                        <li><a href="">Al Jahra</a></li>
+                                        <li><a href="">Hawalli</a></li>
+                                        <li><a href="">Mubarak Al Kabeer</a></li>
+                                        <li><a href="">AlAhmadi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="flagRegionULLi">
+                                    <div class="flag_img image_2"></div>
+                                    <p class="countryName">uae</p>
+                                    <span class="chevronDown"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <ul class="cites">
+                                        <li><a href="">all cities</a></li>
+                                        <li><a href="">Abu Dhabi</a></li>
+                                        <li><a href="">Umm Al Quwain</a></li>
+                                        <li><a href="">Ajman</a></li>
+                                        <li><a href="">Dubai</a></li>
+                                        <li><a href="">Fujairah</a></li>
+                                        <li><a href="">Ras Al Khaimah</a></li>
+                                        <li><a href="">Sharjah</a></li>
+                                        <li><a href="">Al Ain</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="flagRegionULLi">
+                                    <div class="flag_img image_3"></div>
+                                    <p class="countryName">bahrain</p>
+                                    <span class="chevronDown"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <ul class="cites">
+                                        <li><a href="">all cities</a></li>
+                                        <li><a href="">Manama</a></li>
+                                        <li><a href="">Muharraq</a></li>
+                                        <li><a href="">Sitrah</a></li>
+                                        <li><a href="">Riffa</a></li>
+                                        <li><a href="">Isa City</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="flagRegionULLi">
+                                    <div class="flag_img image_4"></div>
+                                    <p class="countryName">egypt</p>
+                                    <span class="chevronDown"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <ul class="cites">
+                                        <li><a href="">all cities</a></li>
+                                        <li><a href="">cairo</a></li>
+                                        <li><a href="">alexandria</a></li>
+                                        <li><a href="">aswan</a></li>
+                                        <li><a href="">asyut</a></li>
+                                        <li><a href="">red sea</a></li>
+                                        <li><a href="">luxor</a></li>
+                                        <li><a href="">port said</a></li>
+                                        <li><a href="">suoth sinai</a></li>
+                                        <li><a href="">alminya</a></li>
+                                        <li><a href="">suhaj</a></li>
+                                        <li><a href="">al sharqia</a></li>
+                                        <li><a href="">gharbia</a></li>
+                                        <li><a href="">dakahlia</a></li>
+                                        <li><a href="">dimyat</a></li>
+                                        <li><a href="">ismailia</a></li>
+                                        <li><a href="">beheira</a></li>
+                                        <li><a href="">giza</a></li>
+                                        <li><a href="">kafr el sheikh</a></li>
+                                        <li><a href="">menofia</a></li>
+                                        <li><a href="">suez</a></li>
+                                        <li><a href="">qena</a></li>
+                                        <li><a href="">beni suef</a></li>
+                                        <li><a href="">qalubia</a></li>
+                                        <li><a href="">matrouh</a></li>
+                                        <li><a href="">al wadi al jadid</a></li>
+                                        <li><a href="">north sinai</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="flagRegionULLi">
+                                    <div class="flag_img image_5"></div>
+                                    <p class="countryName">qatar</p>
+                                    <span class="chevronDown"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <ul class="cites">
+                                        <li><a href="">all cities</a></li>
+                                        <li><a href="">Doha</a></li>
+                                    </ul>
+                                </li class="flagRegionULLi">
+
+                                <li class="flagRegionULLi">
+                                    <div class="flag_img image_6"></div>
+                                    <p class="countryName">lebanon</p>
+                                    <span class="chevronDown"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <ul class="cites">
+                                        <li><a href="">all cities</a></li>
+                                        <li><a href="">Beirut</a></li>
+                                        <li><a href="">Saida</a></li>
+                                        <li><a href="">Tripoli</a></li>
+                                        <li><a href="">Zahle</a></li>
+                                        <li><a href="">Jbeil</a></li>
+                                        <li><a href="">Kerwan</a></li>
+                                        <li><a href="">Maten</a></li>
+                                        <li><a href="">Baabda</a></li>
+                                        <li><a href="">Aley</a></li>
+                                        <li><a href="">Shouf</a></li>
+                                        <li><a href="">Tyr</a></li>
+                                        <li><a href="">Jezzine</a></li>
+                                        <li><a href="">Nabatieh</a></li>
+                                        <li><a href="">Sabiah</a></li>
+                                        <li><a href="">Marjeiyoun</a></li>
+                                        <li><a href="">Batroun</a></li>
+                                        <li><a href="">Bshari</a></li>
+                                        <li><a href="">Koura</a></li>
+                                        <li><a href="">Menyeh</a></li>
+                                        <li><a href="">Akkar</a></li>
+                                        <li><a href="">Rashia</a></li>
+                                        <li><a href="">Baalbak</a></li>
+                                        <li><a href="">Hermel</a></li>
+                                        <li><a href="">west bekaa</a></li>
+                                        <li><a href="">Zgharta</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="flagRegionULLi">
+                                    <div class="flag_img image_7"></div>
+                                    <p class="countryName">saudi arabia</p>
+                                    <span class="chevronDown"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <ul class="cites">
+                                        <li><a href="">all cities</a></li>
+                                        <li><a href="">Riyadh</a></li>
+                                        <li><a href="">Dammam</a></li>
+                                        <li><a href="">Jeddah</a></li>
+                                        <li><a href="">Al-Madinah</a></li>
+                                        <li><a href="">Tabouk</a></li>
+                                        <li><a href="">Qassim</a></li>
+                                        <li><a href="">Ahsa</a></li>
+                                        <li><a href="">Assir</a></li>
+                                        <li><a href="">Hail</a></li>
+                                        <li><a href="">Jizan</a></li>
+                                        <li><a href="">Makkah</a></li>
+                                        <li><a href="">Yanbu</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                <!-- Icon In All Devises -->
+                <div class="icon_smView">
+                    <div class="search_icon"><a href=""><img src="images/icon/search.svg" alt="search"></a> </div>
+                    <button class="notibtn" onclick="notiBtn();">
+                        <div class="notifiction_icon">
+                            <img src=" images/icon/bell.svg" alt="bell">
+                            <div class="not-count">1</div>
+                        </div>
+                    </button>
+                    <div class="forHide">
+                        <section class="notificationDiv displayToggle">
+                            <div class="notificationDivBg"></div>
+                            <div class="newNotificationHeading">
+                                New Notification
+                            </div>
+                            <div class="newNotificationContainer">
+                                <div class="newNotificationItem">
+                                    <img src="images/icon/bell.svg" alt="notification">
+                                    <div class="newNotificationContent">
+                                        <p>Lorem ipsum dolor sit amet adipisicing.</p>
+                                        <div class="contentLinkAndDate">
+                                            <a href="">More</a>
+                                            <div class="date">17 April 2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="newNotificationItem">
+                                    <img src="images/icon/bell.svg" alt="notification">
+                                    <div class="newNotificationContent">
+                                        <p>Lorem ipsum dolor sit amet adipisicing.</p>
+                                        <div class="contentLinkAndDate">
+                                            <a href="">More</a>
+                                            <div class="date">17 April 2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="newNotificationItem">
+                                    <img src="images/icon/bell.svg" alt="notification">
+                                    <div class="newNotificationContent">
+                                        <p>Lorem ipsum dolor sit amet adipisicing.</p>
+                                        <div class="contentLinkAndDate">
+                                            <a href="">More</a>
+                                            <div class="date">17 April 2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="newNotificationItem">
+                                    <img src="images/icon/bell.svg" alt="notification">
+                                    <div class="newNotificationContent">
+                                        <p>Lorem ipsum dolor sit amet adipisicing.</p>
+                                        <div class="contentLinkAndDate">
+                                            <a href="">More</a>
+                                            <div class="date">17 April 2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="newNotificationItem">
+                                    <img src="images/icon/bell.svg" alt="notification">
+                                    <div class="newNotificationContent">
+                                        <p>Lorem ipsum dolor sit amet adipisicing.</p>
+                                        <div class="contentLinkAndDate">
+                                            <a href="">More</a>
+                                            <div class="date">17 April 2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
             </div>
-            <div class="headerTaps">
+
+            <!-- headerTaps For Small Devices -->
+            <div class="headerTaps toggleShowHide">
                 <!-- Tab links -->
                 <div class="tab">
-                    <button class="tablinks activeTapHomePage"
-                        onclick="window.location='index.html';showPageContent(event);">Home Page
+                    <button class="tablinks activeTapHomePage" onclick="window.location='index.html';">Home Page
                     </button>
 
                 </div>
                 <div id="commercialPageTap" class="tab">
-                    <button class="tablinks"
-                        onclick="window.location='commercialAds.html';showPageContent(event);">Commercial
+                    <button class="tablinks" onclick="window.location='commercialAds.html';">Commercial
                         ads</button>
+                </div>
+            </div>
+            <!-- Header From 992px Width -->
+            <div class="LgSecondHeader toggleShowHide">
+                <div class="logo">
+                    <img src="images/icon/en-wasset-logo.svg" alt="waseet" class="logoImg">
+                </div>
+                <div class="mainHomePageNav">
+                    <ul class="ulStyle">
+                        <li><a href="" class="mainLgMenuActive">Home Page</a></li>
+                        <li><a href="">Sticky ads</a></li>
+                        <li><a href="commercialAds.html">Commercials ads</a></li>
+                        <li><a href="">Daleel Waseet</a></li>
+                    </ul>
+                </div>
+                <div class="post">
+                    <a href="#"><img src="images/icon/post_add_black_24dp.svg" alt="postAd"> Add your ad now</a>
                 </div>
             </div>
         </div>
     </header><!-- Header Small View -->
 
-
     <section class="pageContentSection">
         <div class="pageContent">
             <!-- Home Page content -->
             <div id="homePage" class="tabcontent">
-                <!-- Main Slider SmallView -->
-                <div class="centerSliderSmView">
-                    <div class="item"><img src="images/slider/eldeghady.jpg" alt=""> </div>
-                    <div class="item"><img src="images/slider/9.jpg" alt=""> </div>
-                    <div class="item"><img src="images/slider/2.jpeg" alt=""> </div>
-                </div><!-- Main Slider SmallView -->
+
+                <div class="container">
+                    <div class="mainSliderAndSearchContainer">
+                        <div class="centerSliderContainer">
+                            <!-- Main Slider SmallView -->
+                            <div class="centerSliderSmView">
+                                <div class="item"><a href=""><img src="images/slider/eldeghady.jpg" alt=""></a></div>
+                                <div class="item"><a href=""><img src="images/slider/9.jpg" alt=""></a></div>
+                                <div class="item"><a href=""><img src="images/slider/2.jpeg" alt=""></a></div>
+                                <div class="item"><a href=""><img src="images/slider/9.jpg" alt=""> </a></div>
+                            </div><!-- Main Slider SmallView -->
+                            <div class="sliderControl toggleShowHide">
+                                <button class="next"><i class="fa-solid fa-angles-left"></i></button>
+                                <button class="prev"><i class="fa-solid fa-angles-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="searchDiv  toggleShowHide">
+                            <div class="iconWithTitle">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <h3>Search in waseet</h3>
+                            </div>
+                            <form class="mainPageForm" action="">
+                                <div class="searchInput">
+                                    <input required placeholder="Search For..." type="search" name="" id="">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <div class="selectsContainer">
+                                    <select required class="categorySelect">
+                                        <option value="" selected disabled hidden>Category</option>
+                                        <option value="car">Cars</option>
+                                        <option value="realEstate">Real Estate</option>
+                                        <option value="services">Services</option>
+                                        <option value="engines">Engines &amp; Machines</option>
+                                        <option value="contractingCrafts">Contracting / Crafts</option>
+                                        <option value="furnitureCurtains">Furniture / Curtains</option>
+                                        <option value="homeAppliancesElectronics">Home Appliances / Electronics</option>
+                                        <option value="yachtSea">Yacht / Sea</option>
+                                        <option value="animalsAccessories">Animals &amp; Accessories</option>
+                                        <option value="familyHealth">Family / Health</option>
+                                        <option value="jobs">Jobs</option>
+                                    </select>
+                                    <select required name="" class="citiesSelect">
+                                        <option value="" selected disabled hidden>City</option>
+                                        <option value="muscat">Muscat</option>
+                                        <option value="salalah">Salalah</option>
+                                        <option value="adDakhiliyah">Ad Dakhiliyah</option>
+                                        <option value="alBatinah">Al Batinah</option>
+                                        <option value="adDhahirah">Ad Dhahirah</option>
+                                        <option value="alBuraimi">Al Buraimi</option>
+                                        <option value="alWusta">Al Wusta</option>
+                                        <option value="ashSharqiyah">Ash Sharqiyah</option>
+                                    </select>
+                                </div>
+                                <button class="searchbtn" type="submit" value="Search">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Category HomePage Icon -->
                 <section class="categoryHomePageSection">
                     <div class="container">
                         <div class="categoryHomePage">
                             <div class="cat">
-                                <div class="imgContainer"><img src="images/icon/cars-main-category-.png"
-                                        alt="home appliance"></div>
-                                <span class="catName">Real Estate</span>
+                                <a href="">
+                                    <div class="imgContainer">
+                                        <img src="images/icon/cars-main-category-.png" alt="home appliance">
+                                    </div>
+                                    <span class="catName">Cars</span>
+                                </a>
                             </div>
                             <div class="cat">
-                                <div class="imgContainer"><img src="images/icon/home-appliances-electronics.png"
-                                        alt="cars">
-                                </div>
-                                <span class="catName">Cars</span>
+                                <a href="">
+                                    <div class="imgContainer"><img src="images/icon/home-appliances-electronics.png"
+                                            alt="cars">
+                                    </div>
+                                    <span class="catName">Real Estate</span>
+                                </a>
+
                             </div>
                             <div class="cat">
-                                <div class="imgContainer"><img src="images/icon/land-camps.png" alt="">
-                                </div>
-                                <span class="catName">Services</span>
+                                <a href="">
+                                    <div class="imgContainer"><img src="images/icon/land-camps.png" alt="">
+                                    </div>
+                                    <span class="catName">Land / camps</span>
+                                </a>
+
                             </div>
                             <div class="cat">
-                                <div class="imgContainer"><img src="images/icon/services.png" alt=""></div>
-                                <span class="catName">Engines & Machines</span>
+                                <a href="">
+                                    <div class="imgContainer"><img src="images/icon/services.png" alt=""></div>
+                                    <span class="catName">Services</span>
+                                </a>
+
                             </div>
                             <div class="cat">
-                                <div class="imgContainer"><img src="images/icon/engines-machines-main.png" alt=""></div>
-                                <span class="catName">Contracting / Crafts</span>
+                                <a href="">
+                                    <div class="imgContainer"><img src="images/icon/engines-machines-main.png" alt="">
+                                    </div>
+                                    <span class="catName">Engines & Machines</span>
+                                </a>
+
                             </div>
                             <div class="cat">
-                                <div class="imgContainer"> <img src="images/icon/sea.png" alt=""></div>
-                                <span class="catName">Furniture / Curtains</span>
+                                <a href="">
+                                    <div class="imgContainer"> <img src="images/icon/sea.png" alt=""></div>
+                                    <span class="catName">Yacht / Sea</span>
+                                </a>
+
                             </div>
                             <div class="cat">
-                                <div class="imgContainer"><img src="images/icon/contracting-crafts-main.png" alt="">
-                                </div>
-                                <span class="catName">Home Appliances / Electronics</span>
+                                <a href="">
+                                    <div class="imgContainer"><img src="images/icon/contracting-crafts-main.png" alt="">
+                                    </div>
+                                    <span class="catName">Contracting / Crafts</span>
+                                </a>
+
                             </div>
                             <div class="cat">
-                                <div class="imgContainer"><img src="images/icon/furniture-curtains.png" alt=""></div>
-                                <span class="catName">Animals & Accessories</span>
+                                <a href="">
+                                    <div class="imgContainer"><img src="images/icon/furniture-curtains.png" alt="">
+                                    </div>
+                                    <span class="catName">Furniture / Curtains</span>
+                                </a>
+
                             </div>
                             <div class="cat">
-                                <div class="imgContainer"><img src="images/icon/animals-accessories.png" alt="">
-                                </div>
-                                <span class="catName">Family / Health</span>
+                                <a href="">
+                                    <div class="imgContainer"><img src="images/icon/animals-accessories.png" alt="">
+                                    </div>
+                                    <span class="catName">Animals</span>
+                                </a>
+
                             </div>
                             <div class="cat">
                                 <a href="#">
                                     <div class="imgContainer"><img src="images/icon/family-health.png" alt="">
                                     </div>
-                                    <span class="catName">Jobs</span>
+                                    <span class="catName">Family / Health</span>
                                 </a>
                             </div>
                             <div class="cat">
@@ -135,14 +480,14 @@
                                 <a href="#">
                                     <div class="imgContainer"><img src="images/icon/training-institutes.png" alt="">
                                     </div>
-                                    <span class="catName">Jobs</span>
+                                    <span class="catName">Training / Institutes</span>
                                 </a>
                             </div>
                             <div class="cat">
                                 <a href="#">
                                     <div class="imgContainer"><img src="images/icon/weddings-events.png" alt="">
                                     </div>
-                                    <span class="catName">Jobs</span>
+                                    <span class="catName">Weddings / Events</span>
                                 </a>
                             </div>
                             <div class="cat">
@@ -150,26 +495,893 @@
                                     <div class="imgContainer"><img src="images/icon/home-appliances-electronics.png"
                                             alt="">
                                     </div>
-                                    <span class="catName">Jobs</span>
+                                    <span class="catName">Home Appliances / Electronics</span>
                                 </a>
                             </div>
                             <div class="cat">
                                 <a href="#">
                                     <div class="imgContainer"><img src="images/icon/miscellaneous.png" alt="">
                                     </div>
-                                    <span class="catName">Jobs</span>
+                                    <span class="catName">Miscellaneous</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </section><!-- Category HomePage Icon -->
 
+                <!-- Have Question Section -->
+                <div class="havequestion toggleShowHide">
+                    <img src="images/image/Mask Group 124.svg" alt="">
+                    <h2>Do You Have Any Question?</h2>
+                    <a href="">Contact With Sales Agents</a>
+                    <img src="images/image/Mask Group 123.svg" alt="">
+                </div><!-- Have Question Section -->
+
+                <!-- Commercials Ads Title -->
+                <section class="titleSection">
+                    <div class="container">
+                        <div class="flexArrangement">
+                            <h3 class="title"><i class="fa-solid fa-bullhorn"></i>Commercials Ads</h3>
+                            <div class="arrowMore"><a href="#"><small class="titleSectionMore">More</small><i
+                                        class="fa-solid fa-arrow-right"></i></a></div>
+                        </div>
+                    </div>
+                </section><!-- Sticky Ads Title -->
+
+                <!-- Commercials Ads Slider -->
+                <section class="CommercialsAdsSlider">
+                    <div class="container">
+                        <div class="autoplayCommercialsAddSliderContainer">
+                            <div class="autoplayCommercialsAddSlider">
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/download.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EpnDn-5XMAAPvH9.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/download.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EpnDn-5XMAAPvH9.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/download.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EpnDn-5XMAAPvH9.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/download.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EpnDn-5XMAAPvH9.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="CommercialsItem">
+                                    <div class="CommercialsItemborder">
+                                        <div class="CommercialsItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="CommercialsItemContent">
+                                            <button class="CommercialsItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="CommercialsItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="CommercialsItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="cardItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="CommercialsIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="autoplayCommercialsAddSliderControl toggleShowHide">
+                                <button class="nextCommercialsAds"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button class="prevCommercialsAds"><i class="fa-solid fa-chevron-left"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </section><!-- Sticky Ads Slider -->
+
                 <!-- Sticky Ads Title -->
                 <section class="titleSection">
                     <div class="container">
                         <div class="flexArrangement">
-                            <h3 class="title">Sticky Ads</h3>
-                            <div class="arrowMore"><a href="#"><i class="fa-solid fa-arrow-right"></i></a></div>
+                            <h3 class="title"><i class="fa-solid fa-bolt-lightning sticyI"></i>Sticky Ads</h3>
+                            <div class="arrowMore"><a href="#"><small class="titleSectionMore">More</small><i
+                                        class="fa-solid fa-arrow-right sticyArrow"></i></a>
+                            </div>
                         </div>
                     </div>
                 </section><!-- Sticky Ads Title -->
@@ -177,239 +1389,973 @@
                 <!-- Sticky Ads Slider -->
                 <section class="stickyAdsSlider">
                     <div class="container">
-                        <div class="autoplaystickAddSlider">
-                            <div class="stickyItem">
-                                <div class="stickyItemborder">
-                                    <div class="stickyItemImg">
-                                        <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
-                                        <div class="imgNum">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 16 16">
-                                                <g id="collections_black_24dp" transform="translate(-2 -2)">
-                                                    <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
-                                                        transform="translate(2 2)" fill="none" />
-                                                    <path id="Path_27791" data-name="Path 27791"
-                                                        d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
-                                                        transform="translate(1 1)" fill="#fff" />
-                                                </g>
-                                            </svg>
-                                            <span class="imgCount">3</span>
-                                        </div>
-                                        <div class="imgboltstickybadge">
-                                            <div class="boltIconDiv">
-                                                <i class="fa-solid fa-bolt-lightning"></i>
+                        <div class="autoplaystickAddSliderContainer">
+                            <div class="autoplaystickAddSlider">
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
                                             </div>
-                                            <span>sticky</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="stickyItemContent">
-                                        <div class="stickyItemContentaddfavIco"><i class="fa-regular fa-heart"></i>
-                                        </div>
-                                        <div class="stickyItemContenttime">
-                                            <p>December 17, 2022 </p>
-                                        </div>
-                                        <div class="stickyItemContentTitle">
-                                            <h5>آيفون 14 برو ماكس</h5>
-                                        </div>
-                                        <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
-                                    </div>
-
-                                    <div class="stickyIteContact">
-                                        <ul>
-                                            <li>
-                                                <div class="whats"><a
-                                                        href="https://wa.me/+201275611440?text=urlencodedtext"><img
-                                                            src="images/icon/whatsapp_logo-2x.png" alt="">
-                                                    </a></div>
-
-                                            </li>
-                                            <li>
-                                                <div class="call">
-                                                    <a href="#"><img src="images/icon/call.png" alt=""></a>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
                                                 </div>
-                                            </li>
-                                        </ul>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/download.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EpnDn-5XMAAPvH9.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/download.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EpnDn-5XMAAPvH9.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/download.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EpnDn-5XMAAPvH9.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/download.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EpnDn-5XMAAPvH9.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stickyItem">
+                                    <div class="stickyItemborder">
+                                        <div class="stickyItemImg">
+                                            <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
+                                            <div class="imgNum">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="collections_black_24dp" transform="translate(-2 -2)">
+                                                        <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
+                                                            transform="translate(2 2)" fill="none" />
+                                                        <path id="Path_27791" data-name="Path 27791"
+                                                            d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
+                                                            transform="translate(1 1)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                <span class="imgCount">3</span>
+                                            </div>
+                                            <div class="imgboltstickybadge">
+                                                <div class="boltIconDiv">
+                                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                                </div>
+                                                <span>sticky</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="stickyItemContent">
+                                            <button class="stickyItemContentaddfavIco">
+                                                <i class="fa-solid fa-heart fa-heart-caller"
+                                                    onclick="handleFavIcon(this);"></i>
+                                            </button>
+                                            <div class="stickyItemContenttime">
+                                                <p>December 17, 2022 </p>
+                                            </div>
+                                            <div class="stickyItemContentTitle">
+                                                <h5>آيفون 14 برو ماكس</h5>
+                                            </div>
+                                            <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
+                                        </div>
+
+                                        <div class="stickyIteContact">
+                                            <ul>
+                                                <li>
+                                                    <div class="whats"><a
+                                                            href="https://wa.me/+201275611440?text=urlencodedtext"><img
+                                                                src="images/icon/whatsapp_logo-2x.png" alt="">WhatsApp
+                                                        </a></div>
+
+                                                </li>
+                                                <li class="callLi">
+                                                    <div class="call">
+                                                        <a href="#"><img src="images/icon/call.png" alt="">Call</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="stickyItem">
-                                <div class="stickyItemborder">
-                                    <div class="stickyItemImg">
-                                        <img src="images/ads/download.jpg" alt="">
-                                        <div class="imgNum">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 16 16">
-                                                <g id="collections_black_24dp" transform="translate(-2 -2)">
-                                                    <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
-                                                        transform="translate(2 2)" fill="none" />
-                                                    <path id="Path_27791" data-name="Path 27791"
-                                                        d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
-                                                        transform="translate(1 1)" fill="#fff" />
-                                                </g>
-                                            </svg>
-                                            <span class="imgCount">3</span>
-                                        </div>
-                                        <div class="imgboltstickybadge">
-                                            <div class="boltIconDiv">
-                                                <i class="fa-solid fa-bolt-lightning"></i>
-                                            </div>
-                                            <span>sticky</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="stickyItemContent">
-                                        <div class="stickyItemContentaddfavIco"><i class="fa-regular fa-heart"></i>
-                                        </div>
-                                        <div class="stickyItemContenttime">
-                                            <p>December 17, 2022 </p>
-                                        </div>
-                                        <div class="stickyItemContentTitle">
-                                            <h5>آيفون 14 برو ماكس</h5>
-                                        </div>
-                                        <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
-                                    </div>
-
-                                    <div class="stickyIteContact">
-                                        <ul>
-                                            <li>
-                                                <div class="whats"><a
-                                                        href="https://wa.me/+201275611440?text=urlencodedtext"><img
-                                                            src="images/icon/whatsapp_logo-2x.png" alt="">
-                                                    </a></div>
-
-                                            </li>
-                                            <li>
-                                                <div class="call">
-                                                    <a href="#"><img src="images/icon/call.png" alt=""></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="stickyItem">
-                                <div class="stickyItemborder">
-                                    <div class="stickyItemImg">
-                                        <img src="images/ads/EpnDn-5XMAAPvH9.jpg" alt="">
-                                        <div class="imgNum">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 16 16">
-                                                <g id="collections_black_24dp" transform="translate(-2 -2)">
-                                                    <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
-                                                        transform="translate(2 2)" fill="none" />
-                                                    <path id="Path_27791" data-name="Path 27791"
-                                                        d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
-                                                        transform="translate(1 1)" fill="#fff" />
-                                                </g>
-                                            </svg>
-                                            <span class="imgCount">3</span>
-                                        </div>
-                                        <div class="imgboltstickybadge">
-                                            <div class="boltIconDiv">
-                                                <i class="fa-solid fa-bolt-lightning"></i>
-                                            </div>
-                                            <span>sticky</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="stickyItemContent">
-                                        <div class="stickyItemContentaddfavIco"><i class="fa-regular fa-heart"></i>
-                                        </div>
-                                        <div class="stickyItemContenttime">
-                                            <p>December 17, 2022 </p>
-                                        </div>
-                                        <div class="stickyItemContentTitle">
-                                            <h5>آيفون 14 برو ماكس</h5>
-                                        </div>
-                                        <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
-                                    </div>
-                                    <div class="stickyIteContact">
-                                        <ul>
-                                            <li>
-                                                <div class="whats"><a
-                                                        href="https://wa.me/+201275611440?text=urlencodedtext"><img
-                                                            src="images/icon/whatsapp_logo-2x.png" alt="">
-                                                    </a></div>
-
-                                            </li>
-                                            <li>
-                                                <div class="call">
-                                                    <a href="#"><img src="images/icon/call.png" alt=""></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="stickyItem">
-                                <div class="stickyItemborder">
-                                    <div class="stickyItemImg">
-                                        <img src="images/ads/EquQ4h-W4AAQi5R.jpg" alt="">
-                                        <div class="imgNum">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 16 16">
-                                                <g id="collections_black_24dp" transform="translate(-2 -2)">
-                                                    <path id="Path_27790" data-name="Path 27790" d="M0,0H16V16H0Z"
-                                                        transform="translate(2 2)" fill="none" />
-                                                    <path id="Path_27791" data-name="Path 27791"
-                                                        d="M16,11.8V3.4A1.4,1.4,0,0,0,14.6,2H6.2A1.4,1.4,0,0,0,4.8,3.4v8.4a1.4,1.4,0,0,0,1.4,1.4h8.4A1.4,1.4,0,0,0,16,11.8ZM8.58,9.371,9.721,10.9l1.806-2.254a.35.35,0,0,1,.546,0l2.072,2.59a.349.349,0,0,1-.273.567H6.9a.35.35,0,0,1-.28-.56l1.4-1.869a.355.355,0,0,1,.56,0ZM2,5.5v9.1A1.4,1.4,0,0,0,3.4,16h9.1a.7.7,0,0,0,0-1.4H4.1a.7.7,0,0,1-.7-.7V5.5A.7.7,0,1,0,2,5.5Z"
-                                                        transform="translate(1 1)" fill="#fff" />
-                                                </g>
-                                            </svg>
-                                            <span class="imgCount">3</span>
-                                        </div>
-                                        <div class="imgboltstickybadge">
-                                            <div class="boltIconDiv">
-                                                <i class="fa-solid fa-bolt-lightning"></i>
-                                            </div>
-                                            <span>sticky</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="stickyItemContent">
-                                        <div class="stickyItemContentaddfavIco"><i class="fa-regular fa-heart"></i>
-                                        </div>
-                                        <div class="stickyItemContenttime">
-                                            <p>December 17, 2022 </p>
-                                        </div>
-                                        <div class="stickyItemContentTitle">
-                                            <h5>آيفون 14 برو ماكس</h5>
-                                        </div>
-                                        <div class="stickyItemContentPrice">5600 <small>KD</small> </div>
-                                    </div>
-
-                                    <div class="stickyIteContact">
-                                        <ul>
-                                            <li>
-                                                <div class="whats"><a
-                                                        href="https://wa.me/+201275611440?text=urlencodedtext"><img
-                                                            src="images/icon/whatsapp_logo-2x.png" alt="">
-                                                    </a></div>
-
-                                            </li>
-                                            <li>
-                                                <div class="call">
-                                                    <a href="#"><img src="images/icon/call.png" alt=""></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                            <div class="autoplaystickAddSliderControl toggleShowHide">
+                                <button class="nextstickAds"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button class="prevstickAds"><i class="fa-solid fa-chevron-left"></i></button>
                             </div>
                         </div>
+
                     </div>
                 </section><!-- Sticky Ads Slider -->
+
+                <!-- Pre Footer Section-->
+                <div class="PreFooterSection">
+                    <img src="images/image/boy.svg" alt="" class="preFooterBoyImg">
+                    <h2>Download</h2>
+                    <img src="images/icon/logoEN.svg" alt="">
+                    <a href=""><img src="images/icon/appstore.svg" alt=""></a>
+                    <a href=""><img src="images/icon/google.svg" alt=""></a>
+                    <a href=""><img src="images/icon/apple.svg" alt=""></a>
+                    <img src="images/image/girl.svg" alt="" class="preFooterGirlImg">
+                </div>
+                <!-- Pre Footer Section-->
+
             </div>
         </div>
     </section>
 
+    <div class="chat">
+        <button><img class="chatImg" src="images/icon/chatOpen.png" alt="chat"></button>
+    </div>
 
-    <footer id="smallViewFooter">
+    <div class="cookiesLg toggleShowHide">
+        <p>We use your profiles on this website to understand your use of our website and enhance your user experience
+        </p>
+        <a href="">More Information</a>
+        <button onclick="handleCookies();">Ok,i Agree</button>
+    </div>
+
+    <footer id="smallViewFooter" class="toggleShowHide">
         <ul class="smallViewFooterMenu">
 
             <li>
@@ -440,8 +2386,9 @@
             <li>
                 <a href="" class="smallFooterCommentIconHref">
                     <div class="smallFooterCommentIcon">
-                        <i class="fa-solid fa-comments fa-lg"></i>
-                        <div class="smallFooterCommentIconCountDiv">1</div>
+                        <i class="fa-solid fa-comments fa-lg chatIcon">
+                            <div class="smallFooterCommentIconCountDiv">1</div>
+                        </i>
                     </div>
 
                     <span>chat</span>
@@ -458,10 +2405,104 @@
         </ul>
     </footer>
 
+    <footer id="lgFooter">
+        <div class="container">
+            <div class="footerLogo">
+                <img src="images/icon/logoEN.svg" alt="waseet">
+            </div>
+
+            <div class="lgFooterHeading">
+                <div class="catHeading">
+                    <h2 class="lgFooterCategoryHeading">categories</h2>
+                    <div class="line_50"></div>
+                </div>
+                <div class="aboutHeading">
+                    <h2 class="lgFooterAboutHeading">About Waseet</h2>
+                    <div class="line_50"></div>
+                </div>
+
+            </div>
+
+            <div class="lgFooterListContainer">
+                <div class="lgFooterCategoryContainer">
+                    <div class="categoryUl">
+                        <ul class=" ulStyle">
+                            <li><a href="">Cars</a></li>
+                            <li><a href="">Real Estate</a></li>
+                            <li><a href="">Land / camps</a></li>
+                            <li><a href="">Services</a></li>
+                        </ul>
+                        <ul class=" ulStyle">
+                            <li><a href="">Engines & Machines</a></li>
+                            <li><a href="">Yacht / Sea</a></li>
+                            <li><a href="">Contracting / Crafts</a></li>
+                            <li><a href="">Furniture / Curtains</a></li>
+                        </ul>
+                        <ul class=" ulStyle">
+                            <li><a href="">Animals</a></li>
+                            <li><a href="">Family / Health</a></li>
+                            <li><a href="">Jobs</a></li>
+                            <li><a href="">Training / Institutes</a></li>
+                        </ul>
+                        <ul class=" ulStyle">
+                            <li><a href="">Weddings / Events</a></li>
+                            <li><a href="">Home Appliances / Electronics</a></li>
+                            <li><a href="">Miscellaneous</a></li>
+                            <li><a href="">Waseet Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lgFooterAboutContainer">
+                    <ul class="aboutUl ulStyle">
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Privacy policy</a></li>
+                        <li><a href="">How do I use the site</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lgFooterLinksContainer">
+                <div class="lgFooterMoreLinks">
+                    <div class="downloadAlWaseetApp">
+                        <h3 class="downloadAlWaseetAppLiksTitle">
+                            Download Al Waseet App
+                        </h3>
+                        <div class="downloadAlWaseetAppLiksLinks">
+                            <a href=""><img src="images/icon/appstore.png" alt=""></a>
+                            <a href=""><img src="images/icon/playstore.png" alt=""></a>
+                            <a href=""><img src="images/icon/appgallery.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="followUs">
+                        <h3 class="followUsTitle">
+                            Follow us
+                        </h3>
+                        <div class="followUsLinks">
+                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lgFooterOutsideLinks">
+                    <a href="">Daleel Waseet</a>
+                    <a href="">Sales Agents</a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="copyRight">
+                <small>Copyright © waseet.net 2023 All Rights Reserved</small>
+            </div>
+        </div>
+    </footer>
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/select2.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/script.js"></script>
 </body>

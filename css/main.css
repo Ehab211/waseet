@@ -3,13 +3,15 @@
 ***********************************************/
 html {
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 :root {
     --redColor: #E30B1C;
     --orange: #FFCC00;
     --darkColor: #343a40;
-    --backgroundGrayColor: #dddddd80;
+    --backgroundGrayColor: #F7F8F7;
+    --borderGrayColor: #E3E3E3;
     --lightColor: #fff
 }
 
@@ -32,27 +34,89 @@ a {
     text-decoration: none;
 }
 
+.ulStyle {
+    list-style: none;
+}
+
+.LgSecondHeader.toggleShowHide {
+    display: none;
+}
+
+.mainSliderAndSearchContainer .centerSliderContainer .sliderControl.toggleShowHide {
+    display: none;
+}
+
+.autoplaystickAddSliderContainer .autoplaystickAddSliderControl.toggleShowHide,
+.autoplayCommercialsAddSliderContainer .autoplayCommercialsAddSliderControl.toggleShowHide {
+    display: none;
+}
+
+.havequestion.toggleShowHide {
+    display: none;
+}
+
+.cookiesLg.toggleShowHide {
+    display: none;
+}
+
+.forHide {
+    display: none;
+}
+
 .titleSection .flexArrangement {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5px;
+    padding: 25px 5px;
     margin: 10px 0;
-    border-bottom: 1px solid var(--backgroundGrayColor);
+    border-bottom: 1px solid var(--borderGrayColor);
 }
 
 .titleSection .flexArrangement .title {
     font-size: 1rem;
+    padding: 0 10px;
 }
+
+.titleSection .flexArrangement .title i {
+    padding: 0 10px 0 0;
+    color: #e30b1c;
+}
+
+/* .titleSection .flexArrangement .title i.sticyI {
+    color: #FFCC00;
+} */
 
 .titleSection .flexArrangement .arrowMore a {
     font-size: 1.3rem;
     color: var(--redColor);
+    display: flex;
+    align-items: center;
+}
+
+.titleSectionMore {
+    display: none;
+}
+
+.PreFooterSection {
+    display: none;
+}
+
+#lgFooter {
+    display: none;
+}
+
+.fa-heart-caller {
+    color: #cccccc;
+}
+
+.fa-heart-caller.favIconRedToggle {
+    color: #E30B1C;
 }
 
 /**********************************************
 ******************** Global *******************
 ***********************************************/
+
 
 /**********************************************
 *************** HEADER SMAL VIEW **************
@@ -68,16 +132,16 @@ header .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10px;
+    padding: 10px 10px;
     position: fixed;
     background-color: #fff;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 99999999;
+    z-index: 2;
 }
 
-header .top .logo img {
+header .top .logoSm img {
     width: 87px;
     height: 24px;
 }
@@ -86,18 +150,35 @@ header .top .icon_smView {
     display: flex;
 }
 
+
+
 header .top .icon_smView .search_icon,
-header .top .icon_smView .notifiction_icon {
+header .top .icon_smView .notifiction_icon,
+.notificationHeader .titleAndToggle .notifiction_icon {
     position: relative;
+
+}
+
+.smViewHeader .top .icon_smView .notibtn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.smViewHeader .notificationDiv.displayToggle {
+    display: none;
 }
 
 header .top .icon_smView .search_icon {
     margin: 0 10px;
 }
 
-header .top .icon_smView .notifiction_icon .not-count {
+header .top .icon_smView .notifiction_icon .not-count,
+.notificationHeader .titleAndToggle .notifiction_icon .not-count {
     position: absolute;
-    top: 3px;
+    top: 5px;
     left: -5px;
     color: #fff;
     border-radius: 10px;
@@ -105,18 +186,22 @@ header .top .icon_smView .notifiction_icon .not-count {
     align-items: center;
     justify-content: center;
     width: 22px;
-    font-size: 9px;
+    font-size: 12px;
     background: var(--darkColor) 0% 0% no-repeat padding-box;
     border: 1px solid #FAFAFA;
     font-style: italic;
 }
 
+.searchDiv.toggleShowHide {
+    display: none;
+}
+
 .headerTaps {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 0 10px;
-    margin-top: 75px;
+    margin-top: 55px;
 }
 
 
@@ -164,12 +249,18 @@ header .top .icon_smView .notifiction_icon .not-count {
 /**********************************************
 *************** HEADER SMAL VIEW **************
 ***********************************************/
+
+/**********************************************
+******************* HOME PAGE *****************
+***********************************************/
 #homePage {
     overflow: hidden;
-    margin: 0 0 80px 0;
+    margin-bottom: 75px;
 }
 
-/* HmePageContent */
+/*****=====>> MAIN SLIDER <<=====****/
+
+
 .centerSliderSmView .item img {
     width: 100%;
     padding: 5px;
@@ -187,11 +278,12 @@ header .top .icon_smView .notifiction_icon .not-count {
     color: var(--redColor);
 }
 
+/*****=====>> CATEGORY HOME PAGE <<=====****/
 .categoryHomePage {
     padding: 20px 0;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: calc(100vh/40);
+    gap: calc(100vh/70);
     text-align: center;
 }
 
@@ -200,12 +292,13 @@ header .top .icon_smView .notifiction_icon .not-count {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4.375rem;
+    height: 4rem;
     border-radius: 10px;
 }
 
 .categoryHomePage .cat img {
-    width: 45%;
+    width: calc(100vw/11);
+    transition: 0.4s all ease-in-out;
 }
 
 .categoryHomePage .cat .catName {
@@ -213,12 +306,21 @@ header .top .icon_smView .notifiction_icon .not-count {
     font-size: 13px;
     color: var(--darkColor);
     padding: 10px 0 0 0;
+    transition: 0.4s all ease-in-out;
 }
 
+.categoryHomePage .cat:hover .catName {
+    color: var(--redColor);
+    transform: scaleX(1.1);
+}
 
-/* STICKY ADS SLIDER */
+.categoryHomePage .cat:hover img {
+    transform: scale(1.1);
+}
 
-.stickyAdsSlider .autoplaystickAddSlider .stickyItem {
+/*****=====>> STICKY ADS SLIDER <<=====****/
+.stickyAdsSlider .autoplaystickAddSlider .stickyItem,
+.CommercialsAdsSlider .autoplayCommercialsAddSlider .CommercialsItem {
     padding: 5px;
 }
 
@@ -226,7 +328,12 @@ header .top .icon_smView .notifiction_icon .not-count {
     border: 1px solid var(--orange);
 }
 
-.stickyAdsSlider .autoplaystickAddSlider .stickyItem .stickyItemImg {
+.CommercialsAdsSlider .autoplayCommercialsAddSlider .CommercialsItem .CommercialsItemborder {
+    border: 1px solid var(--redColor);
+}
+
+.stickyAdsSlider .autoplaystickAddSlider .stickyItem .stickyItemImg,
+.CommercialsAdsSlider .autoplayCommercialsAddSlider .CommercialsItem .CommercialsItemImg {
     width: 100%;
     position: relative;
 }
@@ -236,6 +343,7 @@ header .top .icon_smView .notifiction_icon .not-count {
 }
 
 .stickyAdsSlider .autoplaystickAddSlider .stickyItem .stickyItemImg .imgNum,
+.CommercialsAdsSlider .autoplayCommercialsAddSlider .CommercialsItem .CommercialsItemImg .imgNum,
 .commercialtapContent .commercialAdCard .cardItemGridContainer .cardAdItem .cardItemImg .imgNum {
     background: rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -266,16 +374,18 @@ header .top .icon_smView .notifiction_icon .not-count {
     text-align: center;
 }
 
-.stickyAdsSlider .autoplaystickAddSlider .stickyItem .stickyItemImg img {
+.stickyAdsSlider .autoplaystickAddSlider .stickyItem .stickyItemImg img,
+.CommercialsAdsSlider .autoplayCommercialsAddSlider .CommercialsItem .CommercialsItemImg img {
     width: 100%;
     object-fit: cover;
     padding: 3px;
 }
 
 .stickyAdsSlider .autoplaystickAddSlider .stickyItem .stickyItemContent,
+.CommercialsAdsSlider .autoplayCommercialsAddSlider .CommercialsItem .CommercialsItemContent,
 .commercialtapContent .commercialAdCard .cardItemGridContainer .cardAdItem .stickyItemContent {
     display: grid;
-    grid-auto-rows: minmax(25px, auto);
+    grid-auto-rows: minmax(20px, auto);
     grid-template-areas:
         "Contenttime Contenttime Contenttime favIco"
         "ContentTitle ContentTitle ContentTitle ContentTitle"
@@ -285,25 +395,35 @@ header .top .icon_smView .notifiction_icon .not-count {
     align-items: center;
 }
 
-.stickyItemContentaddfavIco {
+.stickyItemContentaddfavIco,
+.CommercialsItemContentaddfavIco {
+    justify-self: center;
     grid-area: favIco;
     text-align: center;
-    padding: 10px 5px 0 5px;
+    margin: 10px 5px 0 5px;
+    cursor: pointer;
+    outline: none;
+    width: fit-content;
+    border: none;
+    background-color: transparent;
 }
 
-.stickyItemContenttime {
+.stickyItemContenttime,
+.CommercialsItemContenttime {
     grid-area: Contenttime;
     font-size: 12px;
     padding: 10px 10px 0 10px;
 }
 
-.stickyItemContentTitle {
+.stickyItemContentTitle,
+.CommercialsItemContentTitle {
     grid-area: ContentTitle;
     font-size: 14px;
     padding: 10px 10px 0 10px;
 }
 
-.stickyItemContentPrice {
+.stickyItemContentPrice,
+.cardItemContentPrice {
     font-weight: bold;
     color: var(--orange);
     grid-area: ContentPrice;
@@ -311,34 +431,48 @@ header .top .icon_smView .notifiction_icon .not-count {
     padding: 10px;
 }
 
-.stickyItemContentPrice small {
+.stickyItemContentPrice small,
+.cardItemContentPrice small {
     font-weight: 400;
     color: var(--darkColor);
 }
 
-.stickyIteContact ul {
-    border-top: 1px solid var(--backgroundGrayColor);
+.stickyIteContact ul,
+.CommercialsIteContact ul {
+    border-top: 1px solid var(--borderGrayColor);
     list-style: none;
     display: flex;
 }
 
-.stickyIteContact ul li {
-    border-right: 1px solid var(--backgroundGrayColor);
+.stickyIteContact ul li,
+.CommercialsIteContact ul li {
+    border-right: 1px solid var(--borderGrayColor);
     width: 100%;
 }
 
-.stickyIteContact ul li a {
-    display: inline-block;
+.stickyIteContact ul li.callLi {
+    border-right: 0;
+}
+
+.stickyIteContact ul li a,
+.CommercialsIteContact ul li a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
     width: 100%;
+    padding: 5px 0;
+    color: #333;
 }
 
-.stickyIteContact ul li a img {
+.stickyIteContact ul li a img,
+.CommercialsIteContact ul li a img {
     display: inline-block;
     width: 30px;
     padding: 4px;
 }
 
+/*****=====>> SMALL VIEW FOOTER <<=====****/
 #smallViewFooter {
     padding: 10px 0;
     height: auto;
@@ -391,6 +525,7 @@ header .top .icon_smView .notifiction_icon .not-count {
 
 #smallViewFooter .smallViewFooterMenu li a i {
     color: #9995;
+
 }
 
 #smallViewFooter .smallViewFooterMenu li a span {
@@ -402,18 +537,20 @@ header .top .icon_smView .notifiction_icon .not-count {
     color: var(--redColor);
 }
 
-#smallViewFooter .smallViewFooterMenu li a.smallFooterCommentIconHref {
-    position: relative;
-}
-
 #smallViewFooter .smallViewFooterMenu li a .smallFooterCommentIcon {
     display: inline-grid;
+    justify-items: center;
 }
 
-#smallViewFooter .smallViewFooterMenu li a .smallFooterCommentIcon .smallFooterCommentIconCountDiv {
+#smallViewFooter .smallViewFooterMenu li a .smallFooterCommentIcon .chatIcon {
+    position: relative;
+    width: fit-content;
+}
+
+#smallViewFooter .smallViewFooterMenu li a .smallFooterCommentIcon .chatIcon .smallFooterCommentIconCountDiv {
     position: absolute;
-    top: -10px;
-    left: 15px;
+    top: -11px;
+    left: -8px;
     font-size: 9px;
     color: #fff;
     font-style: italic;
@@ -423,8 +560,13 @@ header .top .icon_smView .notifiction_icon .not-count {
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 1.3;
 }
 
+/**********************************************
+*************** COMMERCIAL PAGE ***************
+***********************************************/
+/*****=====>> COMMERCIAL PAGE <<=====****/
 #commercial .comercial-taps {
     overflow: hidden;
 }
@@ -437,7 +579,7 @@ header .top .icon_smView .notifiction_icon .not-count {
 }
 
 #commercial .comercial-taps .comercial-taps-bar::-webkit-scrollbar {
-    -webkit-appearance: none
+    -webkit-appearance: none;
 }
 
 #commercial .comercial-taps .comercial-taps-bar>* {
@@ -468,8 +610,8 @@ header .top .icon_smView .notifiction_icon .not-count {
 .commercialtapContent .commercialAdCard .cardItemGridContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin: 10px 0 85px 0;
+    gap: 10px;
+    margin: 0px 0 110px 0;
 }
 
 .commercialtapContent .commercialAdCard .cardItemGridContainer .cardAdItem,
@@ -499,4 +641,231 @@ header .top .icon_smView .notifiction_icon .not-count {
 .cardItemContentPrice small {
     font-weight: 400;
     color: var(--darkColor);
+}
+
+/*******************************************************************/
+/************************ NOTIFICATION PAGE ************************/
+/*******************************************************************/
+.notificationHeader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.notificationHeader .titleAndToggle {
+    background-color: #413636;
+    color: #fff;
+}
+
+.notificationHeader .icon,
+.notificationHeader .titleAndToggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+    padding: 20px;
+}
+
+.notificationHeader .icon {
+    background-color: #e30b1c;
+}
+
+.notificationHeader .titleAndToggle h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 150px;
+}
+
+.notificationHeader .icon a {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 47px;
+    height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 15px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #E30B1C;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #E30B1C;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* The switch - the box around the slider */
+
+.notificationImageBg {
+    background-image: url(../images/image/Push\ notifications-bro.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 175px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.6;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: -5;
+
+}
+
+.notificationContainer {
+    position: relative;
+    top: 180px;
+    padding-bottom: 10px;
+}
+
+.notificationContainer .notificationItemContainer {
+    padding: 10px;
+    margin: 20px 0;
+    background: rgb(227 11 28 / 74%);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(11px);
+    border: 1px solid rgba(227, 11, 20, 0.1);
+}
+
+
+.notificationContainer .notificationItemContainer i {
+    margin: 0 5px;
+}
+
+.notificationContainer .notificationItemContainer .notificationItemContent {
+    position: relative;
+}
+
+.notificationContainer .notificationItemContainer .notificationItemContent .content {
+    width: 80%;
+    line-height: 1.5;
+    margin-left: 65px;
+}
+
+.notificationContainer .notificationItemContainer .notificationItemContent .contentLinkAndDate {
+    margin-left: 65px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.notificationContainer .notificationItemContainer .notificationItemContent .contentLinkAndDate a {
+    width: fit-content;
+    color: #333;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+
+.notificationContainer .notificationItemContainer .notificationItemContent .contentLinkAndDate .date {
+    justify-self: flex-end;
+    padding: 0 5px;
+    color: aliceblue;
+}
+
+.notificationContainer .notificationItemContainer .content p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 0.3px;
+}
+
+
+.notificationContainer .notificationItemContainer .notificationItemContent .icon {
+    transform: rotate(45deg);
+    background: #fff;
+    border: 1px solid #413636;
+    border-radius: 5px;
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.notificationContainer .notificationItemContainer .notificationItemContent .icon i {
+    font-size: 20px;
+    padding: 7px;
+    color: #7c7171;
+    transform: rotate(-45deg);
+}
+
+.chat {
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+}
+
+.chat button {
+    background-color: #E30B1C;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat img {
+    width: 20px;
 }

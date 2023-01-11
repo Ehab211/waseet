@@ -1,0 +1,15 @@
+<svg id="post_add_black_24dp" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_3056" data-name="Group 3056">
+    <rect id="Rectangle_2071" data-name="Rectangle 2071" width="24" height="24" fill="none"/>
+    <rect id="Rectangle_2072" data-name="Rectangle 2072" width="24" height="24" fill="none"/>
+  </g>
+  <g id="Group_3058" data-name="Group 3058" transform="translate(-1.998 -0.998)">
+    <g id="Group_3057" data-name="Group 3057" transform="translate(3 2)">
+      <path id="Path_15471" data-name="Path 15471" d="M20.365,13.1a1.161,1.161,0,0,0-1.158,1.158V20.3a1.161,1.161,0,0,1-1.158,1.158H6.473A1.161,1.161,0,0,1,5.315,20.3V8.473A1.161,1.161,0,0,1,6.473,7.315h5.788a1.158,1.158,0,1,0,0-2.315H5.315A2.322,2.322,0,0,0,3,7.315V21.207a2.322,2.322,0,0,0,2.315,2.315H19.207a2.322,2.322,0,0,0,2.315-2.315V14.261A1.161,1.161,0,0,0,20.365,13.1Z" transform="translate(-3 -1.527)" fill="#fff"/>
+      <path id="Path_15472" data-name="Path 15472" d="M22.127,5.473H19.788V3.135A1.136,1.136,0,0,0,18.654,2h-.035a1.139,1.139,0,0,0-1.146,1.135V5.473H15.146A1.154,1.154,0,0,0,14,6.608v.035a1.141,1.141,0,0,0,1.146,1.146h2.327v2.327a1.132,1.132,0,0,0,1.146,1.135h.035a1.136,1.136,0,0,0,1.135-1.135V7.788h2.338a1.136,1.136,0,0,0,1.135-1.135V6.608A1.136,1.136,0,0,0,22.127,5.473Z" transform="translate(-1.266 -2)" fill="#fff"/>
+      <path id="Path_15473" data-name="Path 15473" d="M15.1,9H8.158a1.158,1.158,0,1,0,0,2.315H15.1A1.158,1.158,0,1,0,15.1,9Z" transform="translate(-2.369 -0.896)" fill="#fff"/>
+      <path id="Path_15474" data-name="Path 15474" d="M15.1,12H8.158a1.158,1.158,0,0,0,0,2.315H15.1A1.158,1.158,0,1,0,15.1,12Z" transform="translate(-2.369 -0.423)" fill="#fff"/>
+      <path id="Path_15475" data-name="Path 15475" d="M15.1,15H8.158a1.158,1.158,0,0,0,0,2.315H15.1A1.158,1.158,0,1,0,15.1,15Z" transform="translate(-2.369 0.05)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

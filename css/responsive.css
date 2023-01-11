@@ -1,0 +1,1156 @@
+@media(max-width:575px) {
+
+    .stickyIteContact ul li a,
+    .CommercialsIteContact ul li a {
+        padding: 5px;
+        font-size: 0.65rem;
+    }
+
+    .stickyIteContact ul li a img,
+    .CommercialsIteContact ul li a img {
+        display: inline-block;
+        width: 25px;
+        padding: 2px;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media(min-width:576px) {
+    .titleSectionMore {
+        display: block;
+    }
+
+    .titleSection .flexArrangement .arrowMore a i {
+        margin-left: 10px;
+    }
+
+    .categoryHomePage {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .categoryHomePage .cat img {
+        width: calc(100vw/16);
+    }
+
+    .categoryHomePage .cat .imgContainer {
+        height: 5rem;
+    }
+
+    .LgSecondHeader.toggleShowHide {
+        display: none;
+    }
+
+    .mainSliderAndSearchContainer .centerSliderContainer .sliderControl.toggleShowHide {
+        display: none;
+    }
+
+    .stickyIteContact ul li a,
+    .CommercialsIteContact ul li a {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+    .stickyIteContact ul li a img,
+    .CommercialsIteContact ul li a img {
+        display: inline-block;
+        width: 25px;
+        padding: 2px;
+    }
+
+    .commercialtapContent .commercialAdCard .cardItemGridContainer {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 25px;
+    }
+
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    /*****=====>> HEADER <<=====****/
+    header .top .logoSm img {
+        width: 115px;
+        height: 35px;
+        margin: 10px 20px;
+    }
+
+    .smViewHeader .top .icon_smView img {
+        width: 40px;
+    }
+
+    header .top .icon_smView .notifiction_icon .not-count {
+        font-size: 12px;
+    }
+
+    .headerTaps {
+        justify-content: space-evenly;
+        margin-top: 63px;
+    }
+
+    .tabcontent {
+        padding: 30px 0px;
+    }
+
+    .tab button {
+        font-size: 1.25rem;
+    }
+
+    .centerSliderSmView .item img {
+        height: 225px;
+    }
+
+    /*****=====>> CATEGORY HOME PAGE <<=====****/
+    .categoryHomePage {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: calc(100vh/60);
+        padding: 30px 0;
+    }
+
+    .categoryHomePage .cat .imgContainer {
+        height: 5.375rem;
+    }
+
+    .categoryHomePage .cat img {
+        padding: 5px;
+    }
+
+    .categoryHomePage .cat .catName {
+        display: block;
+        font-size: 16px;
+    }
+
+    /*****=====>> STICKY ADS SLIDER <<=====****/
+    .titleSection .flexArrangement .title {
+        font-size: 1.5rem;
+    }
+
+    .titleSection .flexArrangement .arrowMore a {
+        font-size: 1.8rem;
+    }
+
+    .titleSection .flexArrangement .arrowMore a i {
+        margin-left: 10px;
+    }
+
+    .stickyItemContenttime p {
+        font-size: 14px;
+    }
+
+    .stickyItemContentTitle h5,
+    .stickyItemContentPrice,
+    .cardItemContentPrice {
+        font-size: 16px;
+    }
+
+    /*****=====>> SMALL VIEW FOOTER <<=====****/
+    #smallViewFooter .smallViewFooterMenu li a .smallFooterCommentIcon .chatIcon .smallFooterCommentIconCountDiv {
+        top: -15px;
+        left: -5px;
+        font-size: 10px;
+    }
+
+    #smallViewFooter .smallViewFooterMenu li a i {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    #smallViewFooter .smallViewFooterMenu li a span {
+        font-size: 16px;
+    }
+
+    #smallViewFooter .smallViewFooterMenu li a.plusIconFooter .plusIconFooterBg {
+        left: 49%;
+    }
+
+    #smallViewFooter .smallViewFooterMenu li a.plusIconFooter .plusIconFooterBg i {
+
+        line-height: 1.3;
+    }
+
+    /**********************************************
+    *************** COMMERCIAL PAGE ***************
+    ***********************************************/
+    #commercial .comercial-taps .comercial-taps-bar>* {
+        font-size: 16px;
+    }
+
+    .commercialtapContent .commercialAdCard .cardItemGridContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        row-gap: 30px;
+    }
+
+    .LgSecondHeader.toggleShowHide {
+        display: none;
+    }
+
+    .stickyIteContact ul li a,
+    .CommercialsIteContact ul li a {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 991.9px) {
+    .smViewHeader .top .headerControlLangAndRegionLargeDevices.toggleShowHide {
+        display: none !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .forHide {
+        display: block;
+    }
+
+    .cookiesLg.toggleShowHide {
+        display: grid;
+    }
+
+    #homePage {
+        margin-bottom: unset;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .tabcontent {
+        padding: unset;
+    }
+
+    .centerSliderSmView .item img {
+        height: 315px;
+    }
+
+    .overflow {
+        overflow: hidden;
+    }
+
+    .smViewHeader .top .icon_smView {
+        position: relative;
+    }
+
+    .smViewHeader .top .icon_smView .notificationDiv {
+        position: absolute;
+        min-height: 100px;
+        width: max-content;
+        right: 0px;
+        top: 50px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 310px;
+        border: 1px solid #e0d8d8;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 1px #b3a2a299;
+        background-color: #fff;
+    }
+
+    .smViewHeader .top .icon_smView .notificationDiv .notificationDivBg {
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -5;
+    }
+
+    .smViewHeader .top .icon_smView .notificationDiv .newNotificationHeading {
+        background-color: #5E5758;
+        height: 50px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .smViewHeader .top .icon_smView .notificationDiv .newNotificationItem {
+        display: flex;
+        padding: 10px;
+        background: rgba(227, 11, 28, 0.73);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(11px);
+        border: 1px solid rgba(227, 11, 20, 0.1);
+        margin: 10px;
+        ;
+    }
+
+    .smViewHeader .top .icon_smView .notificationDiv .newNotificationItem img {
+        width: 24px;
+        height: 24px;
+        margin: 0 20px 0 0;
+    }
+
+    .smViewHeader .top .icon_smView .notificationDiv .newNotificationItem p {
+        color: #fff;
+    }
+
+    .smViewHeader .top .icon_smView .notificationDiv .newNotificationItem .contentLinkAndDate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 2;
+    }
+
+    .smViewHeader .top .icon_smView .notificationDiv .newNotificationItem .contentLinkAndDate a {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    .smViewHeader .top .icon_smView .notificationDiv .newNotificationItem .contentLinkAndDate .date {
+        color: #FFDF00;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul.hideShowRegionList {
+        display: flex;
+        opacity: 1;
+        transition: 0.4s all ease-in-out;
+    }
+
+    .transformRotate {
+        transform: rotate(180deg);
+    }
+
+    .logoSm.toggleShowHide,
+    .headerTaps.toggleShowHide {
+        display: none;
+    }
+
+    .mainSliderAndSearchContainer .centerSliderContainer .sliderControl.toggleShowHide {
+        display: block;
+    }
+
+    .autoplaystickAddSliderContainer .autoplaystickAddSliderControl.toggleShowHide,
+    .autoplayCommercialsAddSliderContainer .autoplayCommercialsAddSliderControl.toggleShowHide {
+        display: block;
+    }
+
+    .smViewHeader .top {
+        background-color: #F7F8F7;
+        padding-right: 55px;
+        padding-left: 55px;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices {
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag .flagRegionUL {
+        height: auto;
+        text-transform: capitalize;
+        position: absolute;
+        top: 40px;
+        left: 42px;
+        background-color: #fff;
+        border: 1px solid #ccc8;
+        border-radius: 5px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        opacity: 0;
+        transition: 0.4s all ease-in-out;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li.flagRegionULLi {
+        width: 188px;
+        display: flex;
+        align-items: center;
+        padding: 10px 10px;
+        position: relative;
+        cursor: pointer;
+
+    }
+
+    header .top .langBtn {
+        transition: 0.4s all ease-in-out;
+        height: 24px;
+    }
+
+    header .top .langBtn:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 5px 2px #c0bcbc;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag .clickMe {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 15px;
+        background: transparent;
+        border: 0;
+        width: max-content;
+        cursor: pointer;
+        transition: 0.4s all ease-in-out;
+        border-radius: 10px;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag .clickMe:hover {
+        background-color: #fff;
+    }
+
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag .clickMe img {
+        width: 50px;
+        margin: 0px 10px;
+        padding: 5px;
+        transition: 0.5s all ease-in-out;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag .clickMe:hover img {
+        transform: scale3d(0.9, 1.1, 1);
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag .clickMe .chevronBtn {
+        padding: 0 10px;
+    }
+
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li ul.cites {
+        position: absolute;
+        left: 101%;
+        top: -1%;
+        background-color: #fff;
+        border-radius: 5px;
+        border: 1px solid #ccc6;
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        transition: all 0.4s ease-in-out;
+        min-height: auto;
+        max-height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag .flagRegionUL .flagRegionULLi:hover ul.cites {
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.4s;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .cites li {
+        text-align: center;
+        display: block;
+        transition: 0.4s all ease-in-out;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .cites li a {
+        color: #333;
+        justify-content: center;
+        width: 188px;
+        display: flex;
+        align-items: center;
+        padding: 10px 10px;
+        position: relative;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .cites li:hover {
+        background-color: #ccc8;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .flag_img {
+        height: 24px;
+        width: 45px;
+        background-image: url(../images/flags/css_sprites_flag.webp);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center 0px;
+        display: inline-block;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .countryName {
+        display: inline-block;
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .flag_img.image_1 {
+        background-position: center -23px;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .flag_img.image_2 {
+        background-position: center -52px;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .flag_img.image_3 {
+        background-position: center -81px;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .flag_img.image_4 {
+        background-position: center -112px;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .flag_img.image_5 {
+        background-position: center -145px;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .flag_img.image_6 {
+        background-position: center -175px;
+        height: 26px;
+    }
+
+    header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul li .flag_img.image_7 {
+        background-position: center -210px;
+    }
+
+    header .top .icon_smView .notifiction_icon .not-count {
+        top: 8px;
+        left: 0px;
+    }
+
+    .smViewHeader .top .icon_smView .notifiction_icon .notibtn {
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .LgSecondHeader.toggleShowHide {
+        display: grid;
+    }
+
+    .LgSecondHeader {
+        display: grid;
+        grid-template-columns: 15% 60% 25%;
+        gap: 10px;
+        position: fixed;
+        top: 63px;
+        left: 0;
+        right: 0;
+        padding: 5px 55px;
+        align-items: center;
+        box-shadow: 0px 4px 5px -3px #cccccc;
+        background-color: #fff;
+        line-height: 2.4;
+        z-index: 1;
+    }
+
+    .LgSecondHeader .logo a {
+        display: flex;
+        align-items: center;
+    }
+
+    .LgSecondHeader .mainHomePageNav {
+        width: 100%;
+    }
+
+    .LgSecondHeader .mainHomePageNav ul {
+        display: flex;
+        justify-content: space-evenly;
+        color: #333;
+    }
+
+    .LgSecondHeader .mainHomePageNav ul li a {
+        color: #333;
+        padding: 16px 10px;
+        font-size: 1rem;
+        border-bottom: 0px solid #E30B1C;
+        font-size: 1.1rem;
+    }
+
+    .LgSecondHeader .mainHomePageNav ul li a.mainLgMenuActive {
+        color: #E30B1C;
+        font-weight: bold;
+    }
+
+    .LgSecondHeader .mainHomePageNav ul li a:hover {
+        border-bottom: 2px solid #E30B1C;
+    }
+
+    .LgSecondHeader .post a {
+        background-color: #E30B1C;
+        color: #fff;
+        padding: 15px 10px;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        font-weight: bold;
+        text-transform: capitalize;
+
+    }
+
+    .smViewHeader {
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+
+    }
+
+    .mainSliderAndSearchContainer {
+        position: relative;
+        display: grid;
+        grid-template-columns: 56% 40%;
+        margin-top: 145px;
+        margin-bottom: 25px;
+        gap: 4%;
+    }
+
+    .mainSliderAndSearchContainer .centerSliderContainer {
+        position: relative;
+    }
+
+    .mainSliderAndSearchContainer .centerSliderContainer .sliderControl {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s all ease-in-out;
+    }
+
+    .mainSliderAndSearchContainer .centerSliderContainer .sliderControl button.next,
+    .mainSliderAndSearchContainer .centerSliderContainer .sliderControl button.prev {
+        margin: 0 40px;
+        padding: 10px;
+        background-color: #3339;
+        color: #fff;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .mainSliderAndSearchContainer .centerSliderContainer:hover .sliderControl {
+        bottom: 20px;
+        opacity: 1;
+        visibility: visible;
+        transition: 0.4s all ease-in-out;
+    }
+
+
+    .mainSliderAndSearchContainer .searchDiv {
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 90%;
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 8%);
+        border-radius: 8px;
+    }
+
+    .mainSliderAndSearchContainer .iconWithTitle {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .mainSliderAndSearchContainer .iconWithTitle i {
+        margin: 0px 20px 0 0;
+        font-size: 1.3rem;
+    }
+
+    .mainSliderAndSearchContainer .searchDiv .mainPageForm {
+        display: grid;
+        gap: 20px;
+    }
+
+    .select2-container {
+        width: 100% !important;
+    }
+
+    .select2-container--bootstrap .select2-selection--single {
+        height: 35px;
+    }
+
+    .mainSliderAndSearchContainer .searchDiv .mainPageForm .selectsContainer {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .mainSliderAndSearchContainer .searchDiv .mainPageForm .selectsContainer {
+        padding: 0 20px;
+    }
+
+    .mainSliderAndSearchContainer .searchDiv .mainPageForm .searchInput {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .mainSliderAndSearchContainer .searchDiv .mainPageForm .categorySelect {
+        padding: 8px;
+        outline: 1px solid #e9ebe9;
+        border: 1px solid #e9ebe9;
+        border-radius: 8px;
+        color: #484848;
+        font-size: 1rem;
+        color: #A0A0A0;
+    }
+
+    .select2-container--bootstrap.select2-container--focus .select2-selection,
+    .select2-container--bootstrap.select2-container--open .select2-selection {
+        -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 5px rgb(233 102 102 / 60%);
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 5px rgb(233 102 102 / 60%);
+        -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+        transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+        border-color: #e30b1c;
+    }
+
+    .select2-container--bootstrap .select2-dropdown {
+        -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+        box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+        border-color: #e30b1c;
+        overflow-x: hidden;
+        margin-top: -5px;
+    }
+
+    .select2-container--bootstrap .select2-results__option--highlighted[aria-selected] {
+        background-color: #e30b1c;
+        color: #fff;
+    }
+
+    .mainSliderAndSearchContainer .searchDiv .mainPageForm .categorySelect:invalid {
+        color: #A0A0A0;
+    }
+
+    .mainSliderAndSearchContainer .searchDiv .mainPageForm .searchInput input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 8px;
+        color: #484848;
+        border: 1px solid #e9ebe9;
+        font-size: 1rem;
+    }
+
+    .mainSliderAndSearchContainer .searchDiv .mainPageForm .searchInput input:focus-visible {
+        -webkit-box-shadow: inset 0 1px 1px #e30b1c, 0 0 5px rgb(233 102 102 / 60%);
+        box-shadow: inset 0px 0px 2px #e30b1c, 0px 0px 5px rgb(233 102 102 / 60%);
+        -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+        transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+        border-color: #e30b1c;
+        border: none;
+        outline: none;
+    }
+
+    .mainSliderAndSearchContainer .searchDiv .mainPageForm i {
+        position: absolute;
+        right: 30px;
+        color: #A0A0A0;
+    }
+
+    .mainSliderAndSearchContainer .searchDiv .mainPageForm .searchbtn {
+        width: 25%;
+        margin: 0 auto;
+        padding: 10px;
+        border: 1px solid #fff;
+        background-color: #e30b1c;
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    .searchDiv.toggleShowHide {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .categoryHomePage {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+
+    .categoryHomePage .cat img {
+        width: calc(100vw/20);
+    }
+
+    .stickyIteContact ul li a,
+    .CommercialsIteContact ul li a {
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    /*****=====>> HAVE QUESTION <<=====****/
+    .havequestion.toggleShowHide {
+        display: grid;
+    }
+
+    .havequestion {
+        grid-template-columns: 20% 30% 30% 20%;
+        grid-template-rows: 1fr;
+        padding: 25px 0px 25px 0px;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .havequestion img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .havequestion a {
+        color: #E30B1C;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .stickyAdsSlider {
+        margin: 25px 0 25px 0;
+    }
+
+    .slick-dots {
+        bottom: -50px;
+    }
+
+    .autoplaystickAddSliderContainer,
+    .autoplayCommercialsAddSliderContainer {
+        position: relative;
+    }
+
+    .autoplaystickAddSliderContainer .autoplaystickAddSliderControl,
+    .autoplayCommercialsAddSliderContainer .autoplayCommercialsAddSliderControl {
+        position: absolute;
+        left: 50%;
+        bottom: -75px;
+        transform: translateX(-50%);
+    }
+
+
+    .autoplaystickAddSliderContainer .autoplaystickAddSliderControl .nextstickAds,
+    .autoplaystickAddSliderContainer .autoplaystickAddSliderControl .prevstickAds,
+    .autoplayCommercialsAddSliderContainer .autoplayCommercialsAddSliderControl .nextCommercialsAds,
+    .autoplayCommercialsAddSliderContainer .autoplayCommercialsAddSliderControl .prevCommercialsAds {
+        padding: 5px;
+        border: none;
+        background: transparent;
+        font-size: 1rem;
+        cursor: pointer;
+        bottom: 20px;
+    }
+
+    .autoplaystickAddSliderContainer .autoplaystickAddSliderControl .nextstickAds,
+    .autoplayCommercialsAddSliderContainer .autoplayCommercialsAddSliderControl .nextCommercialsAds {
+        position: relative;
+        left: 150px;
+    }
+
+    .autoplaystickAddSliderContainer .autoplaystickAddSliderControl .prevstickAds,
+    .autoplayCommercialsAddSliderContainer .autoplayCommercialsAddSliderControl .prevCommercialsAds {
+        position: relative;
+        right: 150px;
+    }
+
+    #smallViewFooter.toggleShowHide {
+        display: none;
+    }
+
+    .PreFooterSection {
+        display: grid;
+        grid-template-columns: 23% 12% 10% 12% 12% 12% 13%;
+        grid-template-rows: minmax(50px, 110px);
+        gap: 10px;
+        background-color: #E30B1C;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        text-align: center;
+        margin: 100px 0 0 0;
+        padding: 0 15px;
+    }
+
+    .PreFooterSection img {
+        width: 100%;
+    }
+
+    .PreFooterSection h2 {
+        color: #fff;
+        display: flex;
+        height: 34%;
+        font-size: 1.5rem;
+    }
+
+    .PreFooterSection img.preFooterBoyImg {
+        align-self: end;
+    }
+
+    .PreFooterSection img.preFooterGirlImg {
+        align-self: end;
+        justify-self: end;
+    }
+
+    #lgFooter {
+        background-color: #484848;
+        display: block;
+    }
+
+    #lgFooter .footerLogo {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(70px, auto);
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    #lgFooter .lgFooterHeading {
+        display: grid;
+        grid-template-columns: 77% 23%;
+        grid-template-rows: minmax(70px, auto);
+        align-items: center;
+        color: #fff;
+        font-size: 0.9rem;
+    }
+
+    #lgFooter .lgFooterListContainer {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        align-items: center;
+        gap: 25px;
+    }
+
+    #lgFooter .lgFooterListContainer .lgFooterCategoryContainer .categoryUl {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 30%;
+        align-items: center;
+        column-gap: 25px;
+        font-size: 0.9rem;
+    }
+
+    #lgFooter .lgFooterListContainer .lgFooterCategoryContainer .categoryUl ul,
+    #lgFooter .lgFooterListContainer .lgFooterAboutContainer .aboutUl {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        row-gap: 20px;
+    }
+
+    #lgFooter .lgFooterListContainer .lgFooterCategoryContainer .categoryUl ul li a,
+    #lgFooter .lgFooterListContainer .lgFooterAboutContainer .aboutUl li a {
+        color: #fff;
+        font-size: 0.9rem;
+    }
+
+    #lgFooter .lgFooterLinksContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin: 50px 0px 0 0;
+    }
+
+
+    #lgFooter .lgFooterMoreLinks {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        grid-template-rows: minmax(70px, auto);
+        align-items: center;
+        font-size: 1.1rem;
+
+    }
+
+    #lgFooter .lgFooterMoreLinks .downloadAlWaseetAppLiksLinks {
+        margin: 25px 0px;
+    }
+
+    #lgFooter .lgFooterMoreLinks .downloadAlWaseetAppLiksLinks a img {
+        transition: 0.4s all ease-in-out;
+    }
+
+    #lgFooter .lgFooterMoreLinks .downloadAlWaseetAppLiksLinks a:hover img,
+    #lgFooter .lgFooterMoreLinks .followUs .followUsLinks a:hover i {
+        transform: scale(1.2);
+    }
+
+    #lgFooter .lgFooterMoreLinks .followUs .followUsLinks {
+        margin: 25px 0px;
+    }
+
+    #lgFooter .lgFooterMoreLinks .followUs .followUsLinks i {
+        width: 25px;
+        height: 25px;
+        font-size: 25px;
+        color: #606B88;
+        margin: 0 10px;
+        transition: 0.4s all ease-in-out;
+    }
+
+
+    #lgFooter .lgFooterMoreLinks .downloadAlWaseetAppLiksLinks a {
+        margin: 0 25px 0 0;
+    }
+
+    #lgFooter .lgFooterMoreLinks .downloadAlWaseetApp,
+    #lgFooter .lgFooterMoreLinks .followUs,
+    #lgFooter .lgFooterOutsideLinks a {
+        color: #fff;
+    }
+
+    #lgFooter .lgFooterOutsideLinks a {
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    #lgFooter .lgFooterLinksContainer .lgFooterOutsideLinks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        padding: 0px 25px;
+        height: 100px;
+        text-decoration: underline;
+    }
+
+    #lgFooter .line {
+        height: 2px;
+        background-color: #898989;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #lgFooter .line_50 {
+        height: 1px;
+        background-color: #898989;
+        width: 50px;
+        margin: 10px 0;
+    }
+
+    #lgFooter .copyRight {
+        color: #fff;
+        padding: 10px 0 30px 0;
+        font-size: 1.3rem;
+    }
+
+    .chat {
+        position: fixed;
+        bottom: 115px;
+        right: 50px;
+    }
+
+    .chat button {
+        background-color: #E30B1C;
+        padding: 15px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chat img {
+        width: 25px;
+    }
+
+
+    .cookiesLg {
+        grid-template-columns: 60% 20% 20%;
+        align-items: baseline;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #003f67;
+        padding: 30px 25px;
+        letter-spacing: 0.5px;
+    }
+
+    .cookiesLg p {
+        color: #fff;
+        font-weight: bolder;
+    }
+
+    .cookiesLg a {
+        color: #fff;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 0.8rem;
+    }
+
+    .cookiesLg button {
+        color: #fff;
+        padding: 10px;
+        background-color: #e30b1c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        width: 100px;
+        border: none;
+        outline: none;
+        justify-self: center;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+
+    /* CommercialPage */
+    .commercialtapContent .commercialAdCard .cardItemGridContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 85px 0 110px 0;
+        row-gap: 30px;
+    }
+
+}
+
+
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .centerSliderSmView .item img {
+        height: 45vh;
+    }
+
+    .categoryHomePage .cat .imgContainer {
+        height: 6.375rem;
+    }
+
+    /* CommercialPage */
+    .commercialtapContent .commercialAdCard .cardItemGridContainer {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    /* CommercialPage */
+    .commercialtapContent .commercialAdCard .cardItemGridContainer {
+        row-gap: 40px;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .centerSliderSmView .item img {
+        height: 50vh;
+    }
+
+    .categoryHomePage .cat img {
+        width: calc(5vw);
+        max-width: calc(85px);
+    }
+
+    .categoryHomePage .cat .imgContainer {
+        height: 8.375rem;
+    }
+}
+
+@media (min-width: 1800px) {
+
+    .categoryHomePage .cat .imgContainer {
+        height: 10.375rem;
+    }
+
+    .commercialtapContent .commercialAdCard .cardItemGridContainer {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
