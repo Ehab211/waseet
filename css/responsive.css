@@ -1104,9 +1104,6 @@
 
 }
 
-
-
-
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .centerSliderSmView .item img {
@@ -1127,7 +1124,6 @@
         row-gap: 40px;
     }
 }
-
 
 @media (min-width: 1400px) {
     .centerSliderSmView .item img {
