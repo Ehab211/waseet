@@ -397,7 +397,7 @@ function closeDownloadAppHeader() {
     topHeader.style.paddingRight = "20px";
     topHeader.style.paddingLeft = "20px";
   } else {
-    headerTaps.style.marginTop = "60px";
+    headerTaps.style.marginTop = "59px";
     topHeader.style.paddingRight = "10px";
     topHeader.style.paddingLeft = "10px";
   }
@@ -416,13 +416,13 @@ function myFunction() {
       if (window.matchMedia("(min-width: 768px)").matches) {
         headerTaps.style.marginTop = "78px";
       } else {
-        headerTaps.style.marginTop = "60px";
+        headerTaps.style.marginTop = "59px";
       }
     } else {
       if (window.matchMedia("(min-width: 768px)").matches) {
         headerTaps.style.marginTop = "78px";
       } else {
-        headerTaps.style.marginTop = "60px";
+        headerTaps.style.marginTop = "59px";
       }
     }
   } else {
@@ -432,7 +432,7 @@ function myFunction() {
       if (window.matchMedia("(min-width: 768px)").matches) {
         headerTaps.style.marginTop = "78px";
       } else {
-        headerTaps.style.marginTop = "60px";
+        headerTaps.style.marginTop = "59px";
       }
     }
   }
