@@ -473,7 +473,7 @@ header .top .icon_smView .notifiction_icon .not-count,
 .CommercialsAdsSlider .autoplayCommercialsAddSlider .CommercialsItem .CommercialsItemContent,
 .commercialtapContent .commercialAdCard .cardItemGridContainer .cardAdItem .stickyItemContent {
     display: grid;
-    grid-auto-rows: minmax(30px, auto);
+    grid-auto-rows: minmax(25px, auto);
     grid-template-areas:
         "Contenttime Contenttime Contenttime favIco"
         "ContentTitle ContentTitle ContentTitle ContentTitle"
