@@ -38,6 +38,13 @@ a {
     list-style: none;
 }
 
+.sticky___ {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 11px 10px !important;
+}
+
 .LgSecondHeader.toggleShowHide {
     display: none;
 }
@@ -59,8 +66,20 @@ a {
     display: none;
 }
 
+.commercial-taps-bar-control.toggleShowHide {
+    display: none;
+}
+
+#search.toggleShowHide {
+    display: none;
+}
+
 .forHide {
     display: none;
+}
+
+.downloadAppHeader.toggleShowHide {
+    display: flex;
 }
 
 .titleSection .flexArrangement {
@@ -81,10 +100,6 @@ a {
     padding: 0 10px 0 0;
     color: #e30b1c;
 }
-
-/* .titleSection .flexArrangement .title i.sticyI {
-    color: #FFCC00;
-} */
 
 .titleSection .flexArrangement .arrowMore a {
     font-size: 1.3rem;
@@ -119,6 +134,77 @@ a {
 
 
 /**********************************************
+*************** downloadAppHeader **************
+***********************************************/
+.downloadAppHeader {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-image: url(../images/image/dark-gray-02.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.downloadAppHeader .close {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.downloadAppHeader .leftContent {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+}
+
+.downloadAppHeader .leftContent .content small {
+    display: block;
+}
+
+.downloadAppHeader .leftContent .content {
+    display: block;
+    margin-left: 10px;
+}
+
+
+.downloadAppHeader .leftContent img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.downloadAppHeader .rightContent {
+    align-self: center;
+}
+
+.downloadAppHeader .rightContent .view {
+    border: none;
+    outline: 1px solid #FFF;
+    background-color: teal;
+    width: 50px;
+    height: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+/**********************************************
+*************** downloadAppHeader **************
+***********************************************/
+
+
+
+
+/**********************************************
 *************** HEADER SMAL VIEW **************
 ***********************************************/
 .smViewHeader {
@@ -132,13 +218,14 @@ header .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
-    position: fixed;
+    padding: 10px 0px;
+    /* position: fixed; */
     background-color: #fff;
     top: 0;
     left: 0;
     right: 0;
     z-index: 2;
+    /* margin-top: 80px; */
 }
 
 header .top .logoSm img {
@@ -201,7 +288,7 @@ header .top .icon_smView .notifiction_icon .not-count,
     justify-content: space-evenly;
     align-items: center;
     padding: 0 10px;
-    margin-top: 55px;
+    /* margin-top: 55px; */
 }
 
 
@@ -571,18 +658,18 @@ header .top .icon_smView .notifiction_icon .not-count,
     overflow: hidden;
 }
 
-#commercial .comercial-taps .comercial-taps-bar {
+#commercial .comercial-taps .commercial-taps-bar {
     display: flex;
     overflow: auto;
     scrollbar-width: none;
     scroll-behavior: smooth;
 }
 
-#commercial .comercial-taps .comercial-taps-bar::-webkit-scrollbar {
+#commercial .comercial-taps .commercial-taps-bar::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
-#commercial .comercial-taps .comercial-taps-bar>* {
+#commercial .comercial-taps .commercial-taps-bar>* {
     min-width: max-content;
     padding: 10px;
     background-color: var(--backgroundGrayColor);
@@ -591,13 +678,13 @@ header .top .icon_smView .notifiction_icon .not-count,
     border: 0;
 }
 
-#commercial .comercial-taps .comercial-taps-bar .comercial-taps.activeCommercialTapLinks {
+#commercial .comercial-taps .commercial-taps-bar .comercial-taps.activeCommercialTapLinks {
     background-color: var(--redColor);
     color: var(--lightColor);
 }
 
 
-#commercial .comercial-taps .comercial-taps-bar a {
+#commercial .comercial-taps .commercial-taps-bar a {
     color: var(--darkColor);
 }
 
@@ -806,7 +893,7 @@ input:checked+.slider:before {
 
 .notificationContainer .notificationItemContainer .notificationItemContent .contentLinkAndDate a {
     width: fit-content;
-    color: #333;
+    color: #fff;
     letter-spacing: 1px;
     text-decoration: underline;
 }

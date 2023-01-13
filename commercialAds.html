@@ -21,6 +21,9 @@
     <!-- Slik -->
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <!-- Select2Lib -->
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/select2-bootstrap.min.css">
     <!-- Style -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -323,13 +326,43 @@
         </div>
     </header><!-- Header Small View -->
 
+    <section id="search" class="toggleShowHide">
+        <div class="searchContainer">
+            <div class="searchDiv_">
+                <form class="serachForm" action="">
+                    <div class="searchInput">
+                        <input required placeholder="Search For..." type="search" name="" id="">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="citiesSelectContainer">
+                        <select required name="" class="citiesSelect">
+                            <option value="" selected disabled hidden>City</option>
+                            <option value="muscat">Muscat</option>
+                            <option value="salalah">Salalah</option>
+                            <option value="adDakhiliyah">Ad Dakhiliyah</option>
+                            <option value="alBatinah">Al Batinah</option>
+                            <option value="adDhahirah">Ad Dhahirah</option>
+                            <option value="alBuraimi">Al Buraimi</option>
+                            <option value="alWusta">Al Wusta</option>
+                            <option value="ashSharqiyah">Ash Sharqiyah</option>
+                        </select>
+                    </div>
+                    <button class="searchbtn" type="submit" value="Search">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <section class="pageContentSection">
         <div class="pageContent">
             <!-- Commercial Page content -->
             <div id="commercial" class="tabcontent">
                 <div class="comercial-taps">
-                    <div class="comercial-taps-bar">
+                    <button class="commercial-taps-bar-control toggleShowHide" id="commercialSlideLeft"><i
+                            class="fa-solid fa-circle-chevron-left"></i></button>
+                    <button class="commercial-taps-bar-control toggleShowHide" id="commercialSlideRight"><i
+                            class="fa-solid fa-circle-chevron-right"></i></button>
+                    <div class="commercial-taps-bar">
                         <button id="defaultOpenCommercialCat" class="comercial-taps activeCommercialTapLinks"
                             data-name="all" data-target="#all"
                             onclick="activeCommercialTapLinkshandler(event, 'all')">all</button>
@@ -339,11 +372,11 @@
                             onclick="activeCommercialTapLinkshandler(event, 'buyFurniture')">furniture & buy
                             furniture</button>
                         <button class="comercial-taps" data-name="carsEngines" data-target="#carsEngines"
-                            onclick="activeCommercialTapLinkshandler(event, 'carsEngines')">cars engines</button>
+                            onclick="activeCommercialTapLinkshandler(event, 'carsEngines')">cars & engines</button>
                         <button class="comercial-taps" data-name="domesticLabor" data-target="#domesticLabor"
                             onclick="activeCommercialTapLinkshandler(event, 'domesticLabor')">domestic labor</button>
                         <button class="comercial-taps" data-name="movingFurniture" data-target="#movingFurniture"
-                            onclick="activeCommercialTapLinkshandler(event, 'movingFurniture')">shipping moving
+                            onclick="activeCommercialTapLinkshandler(event, 'movingFurniture')">shipping & moving
                             furniture</button>
                         <button class="comercial-taps" data-name="realEstate" data-target="#realEstate"
                             onclick="activeCommercialTapLinkshandler(event, 'realEstate')">real estate</button>
@@ -356,11 +389,11 @@
                         <button class="comercial-taps" data-name="plumbers" data-target="#plumbers"
                             onclick="activeCommercialTapLinkshandler(event, 'plumbers')">plumbers</button>
                         <button class="comercial-taps" data-name="foodRestaurants" data-target="#foodRestaurants"
-                            onclick="activeCommercialTapLinkshandler(event, 'foodRestaurants')">food
+                            onclick="activeCommercialTapLinkshandler(event, 'foodRestaurants')">food &
                             restaurants</button>
                         <button class="comercial-taps" data-name="sterilizeandCleaning"
                             data-target="#sterilizeandCleaning"
-                            onclick="activeCommercialTapLinkshandler(event, 'sterilizeandCleaning')">sterilizeand
+                            onclick="activeCommercialTapLinkshandler(event, 'sterilizeandCleaning')">sterilizeand &
                             cleaning</button>
                         <button class="comercial-taps" data-name="HardwareRepairAndConditioning"
                             data-target="#HardwareRepairAndConditioning"
@@ -371,14 +404,14 @@
                         <button class="comercial-taps" data-name="satelliteAndSurveillanceCameras"
                             data-target="#satelliteAndSurveillanceCameras"
                             onclick="activeCommercialTapLinkshandler(event, 'satelliteAndSurveillanceCameras')">satellite
-                            and surveillance cameras</button>
+                            & surveillance cameras</button>
                         <button class="comercial-taps" data-name="pigments" data-target="#pigments"
                             onclick="activeCommercialTapLinkshandler(event, 'pigments')">pigments</button>
                         <button class="comercial-taps" data-name="insulator" data-target="#insulator"
                             onclick="activeCommercialTapLinkshandler(event, 'insulator')">insulator</button>
                         <button class="comercial-taps" data-name="healthAndBeauty" data-target="#healthAndBeauty"
                             onclick="activeCommercialTapLinkshandler(event, 'healthAndBeauty')">health
-                            and beauty</button>
+                            & beauty</button>
                     </div>
                 </div>
                 <!-- <button id="slideBack" type="button" onclick="scrollL()">Prev</button>
@@ -11133,7 +11166,6 @@
         </div>
     </section>
 
-
     <div class="chat">
         <button><img class="chatImg" src="images/icon/chatOpen.png" alt="chat"></button>
     </div>
@@ -11292,6 +11324,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/select2.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/script.js"></script>
 </body>

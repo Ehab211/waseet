@@ -356,3 +356,84 @@ let favIconsAll = document.querySelectorAll(".fa-heart-caller");
 function handleFavIcon(x) {
   x.classList.toggle("favIconRedToggle");
 }
+
+/* commercial Page Scroll Btns */
+if (
+  document.getElementById("commercialSlideRight") &&
+  document.getElementById("commercialSlideLeft")
+) {
+  const buttonRight = document.getElementById("commercialSlideRight");
+  const buttonLeft = document.getElementById("commercialSlideLeft");
+
+  buttonRight.onclick = function () {
+    document.querySelector(".commercial-taps-bar").scrollLeft += 850;
+  };
+  buttonLeft.onclick = function () {
+    document.querySelector(".commercial-taps-bar").scrollLeft -= 850;
+  };
+}
+
+let downloadAppHeader = document.querySelector(".downloadAppHeader");
+let closeBtn = document.querySelector(".close");
+let topHeader = document.querySelector("header .top");
+let headerTaps = document.querySelector(".headerTaps");
+/* Show downloadAppHeader on page reload*/
+$(document).ready(function () {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    downloadAppHeader.style.display = "flex";
+  }
+});
+/* Close downloadAppHeader */
+function closeDownloadAppHeader() {
+  let downloadAppHeader = document.querySelector(".downloadAppHeader");
+  let topHeader = document.querySelector("header .top");
+  downloadAppHeader.style.display = "none";
+  topHeader.style.position = "fixed";
+  if (window.matchMedia("(min-width: 992px)").matches) {
+    topHeader.style.paddingRight = "55px";
+    topHeader.style.paddingLeft = "55px";
+  } else if (window.matchMedia("(min-width: 768px)").matches) {
+    headerTaps.style.marginTop = "78px";
+    topHeader.style.paddingRight = "20px";
+    topHeader.style.paddingLeft = "20px";
+  } else {
+    headerTaps.style.marginTop = "60px";
+    topHeader.style.paddingRight = "10px";
+    topHeader.style.paddingLeft = "10px";
+  }
+}
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () {
+  myFunction();
+};
+// Get the offset position of the navbar
+var sticky = topHeader.offsetTop;
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    topHeader.classList.add("sticky___");
+    if (downloadAppHeader.style.display === "flex") {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        headerTaps.style.marginTop = "78px";
+      } else {
+        headerTaps.style.marginTop = "60px";
+      }
+    } else {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        headerTaps.style.marginTop = "78px";
+      } else {
+        headerTaps.style.marginTop = "60px";
+      }
+    }
+  } else {
+    topHeader.classList.remove("sticky___");
+    headerTaps.style.marginTop = "0px";
+    if (downloadAppHeader.style.display === "none") {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        headerTaps.style.marginTop = "78px";
+      } else {
+        headerTaps.style.marginTop = "60px";
+      }
+    }
+  }
+}

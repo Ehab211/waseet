@@ -68,6 +68,12 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    .sticky___ {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 11px 19px !important;
+    }
 
     /*****=====>> HEADER <<=====****/
     header .top .logoSm img {
@@ -86,7 +92,6 @@
 
     .headerTaps {
         justify-content: space-evenly;
-        margin-top: 63px;
     }
 
     .tabcontent {
@@ -100,6 +105,7 @@
     .centerSliderSmView .item img {
         height: 225px;
     }
+
 
     /*****=====>> CATEGORY HOME PAGE <<=====****/
     .categoryHomePage {
@@ -172,7 +178,7 @@
     /**********************************************
     *************** COMMERCIAL PAGE ***************
     ***********************************************/
-    #commercial .comercial-taps .comercial-taps-bar>* {
+    #commercial .comercial-taps .commercial-taps-bar>* {
         font-size: 16px;
     }
 
@@ -204,6 +210,14 @@
 @media (min-width: 992px) {
     .forHide {
         display: block;
+    }
+
+    #search.toggleShowHide {
+        display: block;
+    }
+
+    .downloadAppHeader.toggleShowHide {
+        display: none;
     }
 
     .cookiesLg.toggleShowHide {
@@ -310,6 +324,12 @@
         color: #FFDF00;
     }
 
+    header .top {
+        margin-top: 0px;
+        position: fixed;
+    }
+
+
     header .top .headerControlLangAndRegionLargeDevices .regionBtn .regionFlag ul.hideShowRegionList {
         display: flex;
         opacity: 1;
@@ -336,8 +356,8 @@
 
     .smViewHeader .top {
         background-color: #F7F8F7;
-        padding-right: 55px;
-        padding-left: 55px;
+        padding-right: 55px !important;
+        padding-left: 55px !important;
     }
 
     header .top .headerControlLangAndRegionLargeDevices {
@@ -586,7 +606,7 @@
     .smViewHeader {
         border-bottom-right-radius: 0px;
         border-bottom-left-radius: 0px;
-
+        box-shadow: unset;
     }
 
     .mainSliderAndSearchContainer {
@@ -693,22 +713,22 @@
     .select2-container--bootstrap.select2-container--focus .select2-selection,
     .select2-container--bootstrap.select2-container--open .select2-selection {
         -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 5px rgb(233 102 102 / 60%);
-        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 5px rgb(233 102 102 / 60%);
+        box-shadow: inset 0 1px 1px rgb(255 255 255 / 8%), 0 0 5px rgb(255 255 255 / 60%);
         -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
         -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
         -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
         transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
         transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
         transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-        border-color: #e30b1c;
+        border-color: #e9ebe9;
     }
 
     .select2-container--bootstrap .select2-dropdown {
         -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
         box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
-        border-color: #e30b1c;
+        border-color: #ffffff;
         overflow-x: hidden;
-        margin-top: -5px;
+        margin-top: 0px;
     }
 
     .select2-container--bootstrap .select2-results__option--highlighted[aria-selected] {
@@ -727,19 +747,10 @@
         color: #484848;
         border: 1px solid #e9ebe9;
         font-size: 1rem;
+        color: #a1a1a1;
     }
 
     .mainSliderAndSearchContainer .searchDiv .mainPageForm .searchInput input:focus-visible {
-        -webkit-box-shadow: inset 0 1px 1px #e30b1c, 0 0 5px rgb(233 102 102 / 60%);
-        box-shadow: inset 0px 0px 2px #e30b1c, 0px 0px 5px rgb(233 102 102 / 60%);
-        -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-        -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-        -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-        transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-        border-color: #e30b1c;
-        border: none;
         outline: none;
     }
 
@@ -752,12 +763,13 @@
     .mainSliderAndSearchContainer .searchDiv .mainPageForm .searchbtn {
         width: 25%;
         margin: 0 auto;
-        padding: 10px;
+        padding: 5px;
         border: 1px solid #fff;
         background-color: #e30b1c;
         color: #fff;
         font-size: 1rem;
         border-radius: 5px;
+        cursor: pointer;
     }
 
     .searchDiv.toggleShowHide {
@@ -1094,12 +1106,143 @@
 
 
     /* CommercialPage */
+    /*****=====>> Search Section <<=====****/
+
+    .searchContainer {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    #search {
+        margin-top: 150px;
+    }
+
+    #search .searchDiv_ {
+        padding: 10px;
+        margin: 10px auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        background: rgba(247, 248, 247, 0.8392156862745098);
+        border-radius: 16px;
+        box-shadow: 0 4px 5px rgb(0 0 0 / 10%);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(247, 247, 247, 0.15);
+    }
+
+    #search .searchDiv_ .serachForm {
+        display: grid;
+        grid-template-columns: 59% 25% 16%;
+    }
+
+    #search .searchDiv_ .serachForm .searchInput {
+        position: relative;
+    }
+
+    #search .searchDiv_ .serachForm .searchInput input {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 35px;
+        border: unset;
+        border-right: 1px solid rgb(226, 226, 226);
+        color: #a1a1a1;
+    }
+
+    .select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+        color: #a1a1a1;
+        padding: 0;
+    }
+
+    #search .searchDiv_ .serachForm .searchInput input:focus-visible {
+        border-right: 1px solid rgb(226, 226, 226);
+        outline: none;
+    }
+
+    #search .searchDiv_ .serachForm .searchInput i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #D5D5D5;
+    }
+
+    #search .searchDiv_ .serachForm .citiesSelectContainer .select2-container--bootstrap .select2-selection {
+        border-radius: 0;
+        border: unset;
+        outline: unset;
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+    }
+
+    #search .searchDiv_ .serachForm .citiesSelectContainer .citiesSelect .select2-container--bootstrap .select2-dropdown {
+        -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+        box-shadow: 0 6px 12px rgb(255 255 255 / 18%);
+        border-color: #f8f9f8;
+        overflow-x: hidden;
+        margin-top: 0px;
+    }
+
+    #search .searchDiv_ .serachForm .searchbtn {
+        margin: 0 10px;
+        border: none;
+        outline: none;
+        background: #e30b1c;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .commercial-taps-bar-control.toggleShowHide {
+        display: block;
+    }
+
     .commercialtapContent .commercialAdCard .cardItemGridContainer {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
-        margin: 85px 0 110px 0;
+        margin: 30px 0 110px 0;
         row-gap: 30px;
+    }
+
+    #commercial .comercial-taps {
+        margin-top: 25px;
+        overflow: visible;
+        position: relative;
+    }
+
+    #commercial .comercial-taps .commercial-taps-bar {
+        display: flex;
+        overflow: hidden;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        width: 85vw;
+        margin: 0 auto;
+    }
+
+    #commercial .comercial-taps .commercial-taps-bar-control {
+        position: absolute;
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 0;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 0 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #commercial .comercial-taps .commercial-taps-bar-control i {
+        color: #E30B1C;
+        border: 1px solid #999;
+        border-radius: 50%;
+        font-size: 35px;
+    }
+
+    #commercial .comercial-taps #commercialSlideRight {
+        right: 0px;
     }
 
 }
