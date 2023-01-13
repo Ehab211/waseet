@@ -674,9 +674,9 @@
         gap: 20px;
     }
 
-    .select2-container {
+    /* .select2-container {
         width: 100% !important;
-    }
+    } */
 
     .select2-container--bootstrap .select2-selection--single {
         height: 35px;

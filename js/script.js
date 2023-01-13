@@ -313,11 +313,19 @@ $(document).ready(function () {
 
 // In your Javascript (external .js resource or <script> tag)
 $(document).ready(function () {
-  $(".categorySelect").select2({ theme: "bootstrap" });
+  $(".categorySelect").select2({
+    theme: "bootstrap",
+    dropdownAutoWidth: true,
+    width: "auto",
+  });
 });
 
 $(document).ready(function () {
-  $(".citiesSelect").select2({ theme: "bootstrap" });
+  $(".citiesSelect").select2({
+    theme: "bootstrap",
+    dropdownAutoWidth: true,
+    width: "auto",
+  });
 });
 function notiBtn() {
   // Check if the media query is true
